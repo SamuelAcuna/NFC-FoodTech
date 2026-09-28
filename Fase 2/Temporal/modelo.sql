@@ -1,419 +1,593 @@
--- WARNING: This schema is for context only and is not meant to be run.
--- Table order and constraints may not be valid for execution.
+-- ---------------------------------------------------------------------
+-- 1. USUARIOS Y HOGARES
+-- ---------------------------------------------------------------------
 
-CREATE TABLE public.perfil (
-  id uuid NOT NULL,
-  nombre text,
-  apellido text,
-  fecha_nacimiento date,
-  sexo text CHECK (sexo = ANY (ARRAY['FEMENINO'::text, 'MASCULINO'::text, 'OTRO'::text, 'NO_INFORMA'::text])),
-  zona_horaria text NOT NULL DEFAULT 'America/Santiago'::text,
-  avatar_url text,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  updated_at timestamp with time zone NOT NULL DEFAULT now(),
-  estado_cuenta text NOT NULL DEFAULT 'ACTIVA'::text CHECK (estado_cuenta = ANY (ARRAY['ACTIVA'::text, 'SUSPENDIDA'::text, 'BANEADA'::text])),
-  CONSTRAINT perfil_pkey PRIMARY KEY (id),
-  CONSTRAINT perfil_id_fkey FOREIGN KEY (id) REFERENCES auth.users(id)
+create table public.perfil (
+  id                uuid not null,
+  nombre            text,
+  apellido          text,
+  fecha_nacimiento  date,
+  sexo              text,
+  zona_horaria      text not null default 'America/Santiago',
+  avatar_url        text,
+  created_at        timestamptz not null default now(),
+  updated_at        timestamptz not null default now(),
+  estado_cuenta     text not null default 'ACTIVA',
+  constraint perfil_pkey primary key (id),
+  constraint perfil_id_fkey foreign key (id) references auth.users(id) on delete cascade,
+  constraint perfil_sexo_check check (sexo in ('FEMENINO','MASCULINO','OTRO','NO_INFORMA')),
+  constraint perfil_estado_cuenta_check check (estado_cuenta in ('ACTIVA','SUSPENDIDA','BANEADA'))
 );
-CREATE TABLE public.hogar (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  nombre text NOT NULL,
-  adultos smallint CHECK (adultos >= 0),
-  menores smallint CHECK (menores >= 0),
-  creado_por uuid NOT NULL,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  updated_at timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT hogar_pkey PRIMARY KEY (id),
-  CONSTRAINT hogar_creado_por_fkey FOREIGN KEY (creado_por) REFERENCES public.perfil(id)
+
+create table public.hogar (
+  id          uuid not null default gen_random_uuid(),
+  nombre      text not null,
+  adultos     smallint,
+  menores     smallint,
+  creado_por  uuid not null,
+  created_at  timestamptz not null default now(),
+  updated_at  timestamptz not null default now(),
+  constraint hogar_pkey primary key (id),
+  constraint hogar_creado_por_fkey foreign key (creado_por) references public.perfil(id),
+  constraint hogar_adultos_check check (adultos >= 0),
+  constraint hogar_menores_check check (menores >= 0)
 );
-CREATE TABLE public.hogar_miembro (
-  hogar_id uuid NOT NULL,
-  perfil_id uuid NOT NULL,
-  rol text NOT NULL DEFAULT 'MIEMBRO'::text CHECK (rol = ANY (ARRAY['ADMIN'::text, 'MIEMBRO'::text])),
-  estado text NOT NULL DEFAULT 'INVITADO'::text CHECK (estado = ANY (ARRAY['ACTIVO'::text, 'INVITADO'::text, 'REMOVIDO'::text])),
-  invitado_por uuid,
-  joined_at timestamp with time zone,
-  CONSTRAINT hogar_miembro_pkey PRIMARY KEY (hogar_id, perfil_id),
-  CONSTRAINT hogar_miembro_hogar_id_fkey FOREIGN KEY (hogar_id) REFERENCES public.hogar(id),
-  CONSTRAINT hogar_miembro_perfil_id_fkey FOREIGN KEY (perfil_id) REFERENCES public.perfil(id),
-  CONSTRAINT hogar_miembro_invitado_por_fkey FOREIGN KEY (invitado_por) REFERENCES public.perfil(id)
+
+create table public.hogar_miembro (
+  hogar_id      uuid not null,
+  perfil_id     uuid not null,
+  rol           text not null default 'MIEMBRO',
+  estado        text not null default 'INVITADO',
+  invitado_por  uuid,
+  joined_at     timestamptz,
+  constraint hogar_miembro_pkey primary key (hogar_id, perfil_id),
+  constraint hogar_miembro_hogar_id_fkey foreign key (hogar_id) references public.hogar(id) on delete cascade,
+  constraint hogar_miembro_perfil_id_fkey foreign key (perfil_id) references public.perfil(id) on delete cascade,
+  constraint hogar_miembro_invitado_por_fkey foreign key (invitado_por) references public.perfil(id),
+  constraint hogar_miembro_rol_check check (rol in ('ADMIN','MIEMBRO')),
+  constraint hogar_miembro_estado_check check (estado in ('ACTIVO','INVITADO','REMOVIDO'))
 );
-CREATE TABLE public.categoria (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  nombre text NOT NULL,
-  parent_id bigint,
-  vida_util_dias_ref integer CHECK (vida_util_dias_ref > 0),
-  temp_conservacion text CHECK (temp_conservacion = ANY (ARRAY['AMBIENTE'::text, 'REFRIGERADO'::text, 'CONGELADO'::text])),
-  CONSTRAINT categoria_pkey PRIMARY KEY (id),
-  CONSTRAINT categoria_parent_id_fkey FOREIGN KEY (parent_id) REFERENCES public.categoria(id)
+
+-- ---------------------------------------------------------------------
+-- 2. CATALOGO
+-- ---------------------------------------------------------------------
+
+create table public.categoria (
+  id                  bigint generated by default as identity,
+  nombre              text not null,
+  parent_id           bigint,
+  vida_util_dias_ref  integer,
+  temp_conservacion   text,
+  constraint categoria_pkey primary key (id),
+  constraint categoria_parent_id_fkey foreign key (parent_id) references public.categoria(id),
+  constraint categoria_vida_util_dias_ref_check check (vida_util_dias_ref > 0),
+  constraint categoria_temp_conservacion_check check (temp_conservacion in ('AMBIENTE','REFRIGERADO','CONGELADO'))
 );
-CREATE TABLE public.alimento (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  nombre text NOT NULL UNIQUE,
-  categoria_id bigint NOT NULL,
-  vida_util_dias_ref integer CHECK (vida_util_dias_ref > 0),
-  unidad_base text NOT NULL CHECK (unidad_base = ANY (ARRAY['g'::text, 'ml'::text, 'un'::text])),
-  es_perecible boolean NOT NULL DEFAULT true,
-  estado text NOT NULL DEFAULT 'APROBADO'::text CHECK (estado = ANY (ARRAY['PROPUESTO'::text, 'APROBADO'::text, 'RECHAZADO'::text])),
-  CONSTRAINT alimento_pkey PRIMARY KEY (id),
-  CONSTRAINT alimento_categoria_id_fkey FOREIGN KEY (categoria_id) REFERENCES public.categoria(id)
+
+create table public.alimento (
+  id                  bigint generated by default as identity,
+  nombre              text not null,
+  categoria_id        bigint not null,
+  vida_util_dias_ref  integer,
+  unidad_base         text not null,
+  es_perecible        boolean not null default true,
+  estado              text not null default 'APROBADO',
+  constraint alimento_pkey primary key (id),
+  constraint alimento_nombre_key unique (nombre),
+  constraint alimento_categoria_id_fkey foreign key (categoria_id) references public.categoria(id),
+  constraint alimento_unidad_base_check check (unidad_base in ('g','ml','un')),
+  constraint alimento_vida_util_dias_ref_check check (vida_util_dias_ref > 0),
+  constraint alimento_estado_check check (estado in ('PROPUESTO','APROBADO','RECHAZADO'))
 );
-CREATE TABLE public.marca (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  nombre text NOT NULL UNIQUE,
-  CONSTRAINT marca_pkey PRIMARY KEY (id)
+
+create table public.marca (
+  id      bigint generated by default as identity,
+  nombre  text not null,
+  constraint marca_pkey primary key (id),
+  constraint marca_nombre_key unique (nombre)
 );
-CREATE TABLE public.producto (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  codigo text,
-  tipo_codigo text NOT NULL CHECK (tipo_codigo = ANY (ARRAY['EAN13'::text, 'EAN8'::text, 'UPC'::text, 'INTERNO'::text, 'SIN_CODIGO'::text])),
-  nombre text NOT NULL,
-  marca_id bigint,
-  marca_texto text,
-  alimento_id bigint NOT NULL,
-  tipo_medida text NOT NULL CHECK (tipo_medida = ANY (ARRAY['PESO'::text, 'VOLUMEN'::text, 'UNIDAD'::text])),
-  cantidad_neta numeric NOT NULL CHECK (cantidad_neta > 0::numeric),
-  unidad_neta text NOT NULL CHECK (unidad_neta = ANY (ARRAY['g'::text, 'kg'::text, 'ml'::text, 'l'::text, 'un'::text])),
-  peso_drenado numeric CHECK (peso_drenado > 0::numeric),
-  unidad_drenado text CHECK (unidad_drenado = ANY (ARRAY['g'::text, 'kg'::text])),
-  unidades_envase smallint NOT NULL DEFAULT 1 CHECK (unidades_envase >= 1),
-  contenido_unitario numeric,
-  imagen_url text,
-  atributos jsonb NOT NULL DEFAULT '{}'::jsonb,
-  hogar_id uuid,
-  estado text NOT NULL DEFAULT 'LOCAL'::text CHECK (estado = ANY (ARRAY['LOCAL'::text, 'PROPUESTO'::text, 'APROBADO'::text, 'RECHAZADO'::text])),
-  canonico_id uuid,
-  editado_manual boolean NOT NULL DEFAULT false,
-  creado_por uuid,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  updated_at timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT producto_pkey PRIMARY KEY (id),
-  CONSTRAINT producto_marca_id_fkey FOREIGN KEY (marca_id) REFERENCES public.marca(id),
-  CONSTRAINT producto_alimento_id_fkey FOREIGN KEY (alimento_id) REFERENCES public.alimento(id),
-  CONSTRAINT producto_hogar_id_fkey FOREIGN KEY (hogar_id) REFERENCES public.hogar(id),
-  CONSTRAINT producto_canonico_id_fkey FOREIGN KEY (canonico_id) REFERENCES public.producto(id),
-  CONSTRAINT producto_creado_por_fkey FOREIGN KEY (creado_por) REFERENCES public.perfil(id)
+
+create table public.producto (
+  id                  uuid not null default gen_random_uuid(),
+  codigo              text,
+  tipo_codigo         text not null,
+  nombre              text not null,
+  marca_id            bigint,
+  marca_texto         text,
+  alimento_id         bigint not null,
+  tipo_medida         text not null,
+  cantidad_neta       numeric(10,3) not null,
+  unidad_neta         text not null,
+  peso_drenado        numeric(10,3),
+  unidad_drenado      text,
+  unidades_envase     smallint not null default 1,
+  contenido_unitario  numeric(10,3),
+  imagen_url          text,
+  atributos           jsonb not null default '{}'::jsonb,
+  hogar_id            uuid,
+  estado              text not null default 'LOCAL',
+  canonico_id         uuid,
+  editado_manual      boolean not null default false,
+  creado_por          uuid,
+  created_at          timestamptz not null default now(),
+  updated_at          timestamptz not null default now(),
+  constraint producto_pkey primary key (id),
+  constraint producto_alimento_id_fkey foreign key (alimento_id) references public.alimento(id),
+  constraint producto_marca_id_fkey foreign key (marca_id) references public.marca(id),
+  constraint producto_hogar_id_fkey foreign key (hogar_id) references public.hogar(id) on delete cascade,
+  constraint producto_canonico_id_fkey foreign key (canonico_id) references public.producto(id),
+  constraint producto_creado_por_fkey foreign key (creado_por) references public.perfil(id) on delete set null,
+  constraint producto_tipo_codigo_check check (tipo_codigo in ('EAN13','EAN8','UPC','INTERNO','SIN_CODIGO')),
+  constraint producto_tipo_medida_check check (tipo_medida in ('PESO','VOLUMEN','UNIDAD')),
+  constraint producto_unidad_neta_check check (unidad_neta in ('g','kg','ml','l','un')),
+  constraint producto_unidad_drenado_check check (unidad_drenado in ('g','kg')),
+  constraint producto_cantidad_neta_check check (cantidad_neta > 0),
+  constraint producto_peso_drenado_check check (peso_drenado > 0),
+  constraint producto_unidades_envase_check check (unidades_envase >= 1),
+  constraint producto_estado_check check (estado in ('LOCAL','PROPUESTO','APROBADO','RECHAZADO')),
+  -- peso drenado y su unidad van juntos o no van
+  constraint ck_prod_drenado_par check ((peso_drenado is null) = (unidad_drenado is null)),
+  -- solo un producto SIN_CODIGO puede no traer codigo
+  constraint ck_prod_codigo_requerido check (tipo_codigo = 'SIN_CODIGO' or codigo is not null),
+  -- un producto no puede ser su propio canonico
+  constraint ck_prod_canonico_distinto check (canonico_id is null or canonico_id <> id)
 );
-CREATE TABLE public.producto_fuente (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  producto_id uuid NOT NULL,
-  fuente text NOT NULL CHECK (fuente = ANY (ARRAY['OPEN_FOOD_FACTS'::text, 'BD_PROPIA'::text, 'MANUAL'::text, 'USUARIO'::text])),
-  id_externo text,
-  sincronizado_en timestamp with time zone,
-  payload jsonb,
-  CONSTRAINT producto_fuente_pkey PRIMARY KEY (id),
-  CONSTRAINT producto_fuente_producto_id_fkey FOREIGN KEY (producto_id) REFERENCES public.producto(id)
+
+create table public.producto_nutricion (
+  producto_id            uuid not null,
+  porcion_g              numeric(8,2),
+  energia_kcal           numeric(8,2),
+  proteinas_g            numeric(8,2),
+  grasas_totales_g       numeric(8,2),
+  grasas_saturadas_g     numeric(8,2),
+  carbohidratos_g        numeric(8,2),
+  azucares_g             numeric(8,2),
+  sodio_mg               numeric(8,2),
+  sello_alto_calorias    boolean not null default false,
+  sello_alto_azucar      boolean not null default false,
+  sello_alto_sodio       boolean not null default false,
+  sello_alto_grasas_sat  boolean not null default false,
+  constraint producto_nutricion_pkey primary key (producto_id),
+  constraint producto_nutricion_producto_id_fkey foreign key (producto_id) references public.producto(id) on delete cascade
 );
-CREATE TABLE public.producto_nutricion (
-  producto_id uuid NOT NULL,
-  porcion_g numeric,
-  energia_kcal numeric,
-  proteinas_g numeric,
-  grasas_totales_g numeric,
-  grasas_saturadas_g numeric,
-  carbohidratos_g numeric,
-  azucares_g numeric,
-  sodio_mg numeric,
-  sello_alto_calorias boolean NOT NULL DEFAULT false,
-  sello_alto_azucar boolean NOT NULL DEFAULT false,
-  sello_alto_sodio boolean NOT NULL DEFAULT false,
-  sello_alto_grasas_sat boolean NOT NULL DEFAULT false,
-  CONSTRAINT producto_nutricion_pkey PRIMARY KEY (producto_id),
-  CONSTRAINT producto_nutricion_producto_id_fkey FOREIGN KEY (producto_id) REFERENCES public.producto(id)
+
+create table public.producto_fuente (
+  id               uuid not null default gen_random_uuid(),
+  producto_id      uuid not null,
+  fuente           text not null,
+  id_externo       text,
+  sincronizado_en  timestamptz,
+  payload          jsonb,
+  constraint producto_fuente_pkey primary key (id),
+  constraint producto_fuente_fuente_id_externo_key unique (fuente, id_externo),
+  constraint producto_fuente_producto_id_fkey foreign key (producto_id) references public.producto(id) on delete cascade,
+  constraint producto_fuente_fuente_check check (fuente in ('OPEN_FOOD_FACTS','BD_PROPIA','MANUAL','USUARIO'))
 );
-CREATE TABLE public.despensa_item (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  hogar_id uuid NOT NULL,
-  producto_id uuid,
-  alimento_id bigint,
-  cantidad_inicial numeric NOT NULL CHECK (cantidad_inicial > 0::numeric),
-  cantidad_restante numeric NOT NULL,
-  fecha_ingreso date NOT NULL DEFAULT CURRENT_DATE,
-  fecha_vencimiento date,
-  vencimiento_estimado boolean NOT NULL DEFAULT false,
-  lote_id uuid,
-  ubicacion text NOT NULL DEFAULT 'DESPENSA'::text CHECK (ubicacion = ANY (ARRAY['DESPENSA'::text, 'REFRIGERADOR'::text, 'CONGELADOR'::text])),
-  estado text NOT NULL DEFAULT 'DISPONIBLE'::text CHECK (estado = ANY (ARRAY['DISPONIBLE'::text, 'AGOTADO'::text, 'DESECHADO'::text])),
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  compra_id uuid,
-  precio_clp integer CHECK (precio_clp >= 0),
-  CONSTRAINT despensa_item_pkey PRIMARY KEY (id),
-  CONSTRAINT despensa_item_hogar_id_fkey FOREIGN KEY (hogar_id) REFERENCES public.hogar(id),
-  CONSTRAINT despensa_item_producto_id_fkey FOREIGN KEY (producto_id) REFERENCES public.producto(id),
-  CONSTRAINT despensa_item_alimento_id_fkey FOREIGN KEY (alimento_id) REFERENCES public.alimento(id),
-  CONSTRAINT despensa_item_compra_id_fkey FOREIGN KEY (compra_id) REFERENCES public.compra(id)
+
+-- ---------------------------------------------------------------------
+-- 3. COMPRAS Y DESPENSA
+-- ---------------------------------------------------------------------
+
+create table public.compra (
+  id              uuid not null default gen_random_uuid(),
+  hogar_id        uuid not null,
+  fecha           date not null default current_date,
+  lugar           text,
+  total_clp       integer,
+  registrado_por  uuid not null,
+  created_at      timestamptz not null default now(),
+  constraint compra_pkey primary key (id),
+  constraint compra_hogar_id_fkey foreign key (hogar_id) references public.hogar(id) on delete cascade,
+  constraint compra_registrado_por_fkey foreign key (registrado_por) references public.perfil(id),
+  constraint compra_total_clp_check check (total_clp >= 0)
 );
-CREATE TABLE public.tipo_desperdicio (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  codigo text NOT NULL UNIQUE,
-  nombre text NOT NULL,
-  descripcion text,
-  es_evitable boolean NOT NULL,
-  cuenta_para_vida_util boolean NOT NULL DEFAULT false,
-  activo boolean NOT NULL DEFAULT true,
-  CONSTRAINT tipo_desperdicio_pkey PRIMARY KEY (id)
+
+create table public.despensa_item (
+  id                    uuid not null default gen_random_uuid(),
+  hogar_id              uuid not null,
+  producto_id           uuid,
+  alimento_id           bigint,
+  cantidad_inicial      numeric(10,3) not null,
+  cantidad_restante     numeric(10,3) not null,
+  fecha_ingreso         date not null default current_date,
+  fecha_vencimiento     date,
+  vencimiento_estimado  boolean not null default false,
+  lote_id               uuid,
+  ubicacion             text not null default 'DESPENSA',
+  estado                text not null default 'DISPONIBLE',
+  created_at            timestamptz not null default now(),
+  compra_id             uuid,
+  precio_clp            integer,
+  constraint despensa_item_pkey primary key (id),
+  constraint despensa_item_hogar_id_fkey foreign key (hogar_id) references public.hogar(id) on delete cascade,
+  constraint despensa_item_producto_id_fkey foreign key (producto_id) references public.producto(id),
+  constraint despensa_item_alimento_id_fkey foreign key (alimento_id) references public.alimento(id),
+  constraint despensa_item_compra_id_fkey foreign key (compra_id) references public.compra(id) on delete set null,
+  constraint despensa_item_ubicacion_check check (ubicacion in ('DESPENSA','REFRIGERADOR','CONGELADOR')),
+  constraint despensa_item_estado_check check (estado in ('DISPONIBLE','AGOTADO','DESECHADO')),
+  constraint despensa_item_cantidad_inicial_check check (cantidad_inicial > 0),
+  constraint despensa_item_precio_clp_check check (precio_clp >= 0),
+  -- arco exclusivo: el item viene de un producto con codigo O de un alimento generico, nunca los dos
+  constraint ck_ditem_origen check (num_nonnulls(producto_id, alimento_id) = 1),
+  -- lo restante nunca puede ser negativo ni superar lo que ingreso
+  constraint ck_ditem_cantidades check (cantidad_restante >= 0 and cantidad_restante <= cantidad_inicial)
 );
-CREATE TABLE public.movimiento (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  despensa_item_id uuid NOT NULL,
-  tipo text NOT NULL CHECK (tipo = ANY (ARRAY['INGRESO'::text, 'CONSUMO'::text, 'DESCARTE'::text, 'AJUSTE'::text])),
-  cantidad numeric NOT NULL CHECK (cantidad > 0::numeric),
-  tipo_desperdicio_id bigint,
-  registrado_por uuid NOT NULL,
-  fecha timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT movimiento_pkey PRIMARY KEY (id),
-  CONSTRAINT movimiento_despensa_item_id_fkey FOREIGN KEY (despensa_item_id) REFERENCES public.despensa_item(id),
-  CONSTRAINT movimiento_tipo_desperdicio_id_fkey FOREIGN KEY (tipo_desperdicio_id) REFERENCES public.tipo_desperdicio(id),
-  CONSTRAINT movimiento_registrado_por_fkey FOREIGN KEY (registrado_por) REFERENCES public.perfil(id)
+
+create table public.tipo_desperdicio (
+  id                     bigint generated by default as identity,
+  codigo                 text not null,
+  nombre                 text not null,
+  descripcion            text,
+  es_evitable            boolean not null,
+  cuenta_para_vida_util  boolean not null default false,
+  activo                 boolean not null default true,
+  constraint tipo_desperdicio_pkey primary key (id),
+  constraint tipo_desperdicio_codigo_key unique (codigo)
 );
-CREATE TABLE public.observacion_duracion (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  movimiento_id uuid NOT NULL UNIQUE,
-  alimento_id bigint NOT NULL,
-  producto_id uuid,
-  hogar_id uuid NOT NULL,
-  dias_transcurridos integer NOT NULL CHECK (dias_transcurridos >= 0),
-  ubicacion text NOT NULL CHECK (ubicacion = ANY (ARRAY['DESPENSA'::text, 'REFRIGERADOR'::text, 'CONGELADOR'::text])),
-  registrada_en timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT observacion_duracion_pkey PRIMARY KEY (id),
-  CONSTRAINT observacion_duracion_movimiento_id_fkey FOREIGN KEY (movimiento_id) REFERENCES public.movimiento(id),
-  CONSTRAINT observacion_duracion_alimento_id_fkey FOREIGN KEY (alimento_id) REFERENCES public.alimento(id),
-  CONSTRAINT observacion_duracion_producto_id_fkey FOREIGN KEY (producto_id) REFERENCES public.producto(id),
-  CONSTRAINT observacion_duracion_hogar_id_fkey FOREIGN KEY (hogar_id) REFERENCES public.hogar(id)
+
+create table public.movimiento (
+  id                   uuid not null default gen_random_uuid(),
+  despensa_item_id     uuid not null,
+  tipo                 text not null,
+  cantidad             numeric(10,3) not null,
+  tipo_desperdicio_id  bigint,
+  registrado_por       uuid not null,
+  fecha                timestamptz not null default now(),
+  constraint movimiento_pkey primary key (id),
+  constraint movimiento_despensa_item_id_fkey foreign key (despensa_item_id) references public.despensa_item(id) on delete cascade,
+  constraint movimiento_tipo_desperdicio_id_fkey foreign key (tipo_desperdicio_id) references public.tipo_desperdicio(id),
+  constraint movimiento_registrado_por_fkey foreign key (registrado_por) references public.perfil(id),
+  constraint movimiento_tipo_check check (tipo in ('INGRESO','CONSUMO','DESCARTE','AJUSTE')),
+  constraint movimiento_cantidad_check check (cantidad > 0),
+  -- el tipo de desperdicio existe si y solo si el movimiento es un descarte
+  constraint ck_mov_desperdicio check ((tipo = 'DESCARTE') = (tipo_desperdicio_id is not null))
 );
-CREATE TABLE public.estimacion_vida_util (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  ambito text NOT NULL CHECK (ambito = ANY (ARRAY['CATEGORIA'::text, 'ALIMENTO'::text, 'PRODUCTO'::text])),
-  referencia_id text NOT NULL,
-  hogar_id uuid,
-  ubicacion text NOT NULL CHECK (ubicacion = ANY (ARRAY['DESPENSA'::text, 'REFRIGERADOR'::text, 'CONGELADOR'::text])),
-  dias_mediana numeric NOT NULL,
-  dispersion numeric,
-  n_observaciones integer NOT NULL CHECK (n_observaciones >= 0),
-  actualizada_en timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT estimacion_vida_util_pkey PRIMARY KEY (id),
-  CONSTRAINT estimacion_vida_util_hogar_id_fkey FOREIGN KEY (hogar_id) REFERENCES public.hogar(id)
+
+-- ---------------------------------------------------------------------
+-- 4. ESTIMACION DE VIDA UTIL
+-- ---------------------------------------------------------------------
+
+create table public.observacion_duracion (
+  id                  uuid not null default gen_random_uuid(),
+  movimiento_id       uuid not null,
+  alimento_id         bigint not null,
+  producto_id         uuid,
+  hogar_id            uuid not null,
+  dias_transcurridos  integer not null,
+  ubicacion           text not null,
+  registrada_en       timestamptz not null default now(),
+  constraint observacion_duracion_pkey primary key (id),
+  constraint observacion_duracion_movimiento_id_key unique (movimiento_id),
+  constraint observacion_duracion_movimiento_id_fkey foreign key (movimiento_id) references public.movimiento(id) on delete cascade,
+  constraint observacion_duracion_alimento_id_fkey foreign key (alimento_id) references public.alimento(id),
+  constraint observacion_duracion_producto_id_fkey foreign key (producto_id) references public.producto(id),
+  constraint observacion_duracion_hogar_id_fkey foreign key (hogar_id) references public.hogar(id) on delete cascade,
+  constraint observacion_duracion_dias_transcurridos_check check (dias_transcurridos >= 0),
+  constraint observacion_duracion_ubicacion_check check (ubicacion in ('DESPENSA','REFRIGERADOR','CONGELADOR'))
 );
-CREATE TABLE public.dispositivo (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  perfil_id uuid NOT NULL,
-  push_token text NOT NULL UNIQUE,
-  plataforma text NOT NULL CHECK (plataforma = ANY (ARRAY['ANDROID'::text, 'IOS'::text, 'WEB'::text])),
-  activo boolean NOT NULL DEFAULT true,
-  ultimo_uso timestamp with time zone,
-  CONSTRAINT dispositivo_pkey PRIMARY KEY (id),
-  CONSTRAINT dispositivo_perfil_id_fkey FOREIGN KEY (perfil_id) REFERENCES public.perfil(id)
+
+create table public.estimacion_vida_util (
+  id               uuid not null default gen_random_uuid(),
+  ambito           text not null,
+  referencia_id    text not null,
+  hogar_id         uuid,
+  ubicacion        text not null,
+  dias_mediana     numeric(7,2) not null,
+  dispersion       numeric(7,2),
+  n_observaciones  integer not null,
+  actualizada_en   timestamptz not null default now(),
+  constraint estimacion_vida_util_pkey primary key (id),
+  -- NULLS NOT DISTINCT: hogar_id nulo = estimacion global, y no puede repetirse
+  constraint uk_estimacion unique nulls not distinct (ambito, referencia_id, hogar_id, ubicacion),
+  constraint estimacion_vida_util_hogar_id_fkey foreign key (hogar_id) references public.hogar(id) on delete cascade,
+  constraint estimacion_vida_util_ambito_check check (ambito in ('CATEGORIA','ALIMENTO','PRODUCTO')),
+  constraint estimacion_vida_util_ubicacion_check check (ubicacion in ('DESPENSA','REFRIGERADOR','CONGELADOR')),
+  constraint estimacion_vida_util_n_observaciones_check check (n_observaciones >= 0)
 );
-CREATE TABLE public.plantilla_notificacion (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  codigo text NOT NULL UNIQUE,
-  categoria text NOT NULL CHECK (categoria = ANY (ARRAY['VENCIMIENTO'::text, 'RESUMEN'::text, 'HOGAR'::text, 'SISTEMA'::text, 'MODERACION'::text])),
-  titulo_tpl text NOT NULL,
-  cuerpo_tpl text NOT NULL,
-  es_silenciable boolean NOT NULL DEFAULT true,
-  CONSTRAINT plantilla_notificacion_pkey PRIMARY KEY (id)
+
+-- ---------------------------------------------------------------------
+-- 5. NOTIFICACIONES
+-- ---------------------------------------------------------------------
+
+create table public.dispositivo (
+  id          uuid not null default gen_random_uuid(),
+  perfil_id   uuid not null,
+  push_token  text not null,
+  plataforma  text not null,
+  activo      boolean not null default true,
+  ultimo_uso  timestamptz,
+  constraint dispositivo_pkey primary key (id),
+  constraint dispositivo_push_token_key unique (push_token),
+  constraint dispositivo_perfil_id_fkey foreign key (perfil_id) references public.perfil(id) on delete cascade,
+  constraint dispositivo_plataforma_check check (plataforma in ('ANDROID','IOS','WEB'))
 );
-CREATE TABLE public.preferencia_notificacion (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  perfil_id uuid NOT NULL,
-  plantilla_id bigint NOT NULL,
-  habilitada boolean NOT NULL DEFAULT true,
-  dias_anticipacion smallint CHECK (dias_anticipacion >= 0),
-  hora_envio time without time zone,
-  CONSTRAINT preferencia_notificacion_pkey PRIMARY KEY (id),
-  CONSTRAINT preferencia_notificacion_perfil_id_fkey FOREIGN KEY (perfil_id) REFERENCES public.perfil(id),
-  CONSTRAINT preferencia_notificacion_plantilla_id_fkey FOREIGN KEY (plantilla_id) REFERENCES public.plantilla_notificacion(id)
+
+create table public.plantilla_notificacion (
+  id              bigint generated by default as identity,
+  codigo          text not null,
+  categoria       text not null,
+  titulo_tpl      text not null,
+  cuerpo_tpl      text not null,
+  es_silenciable  boolean not null default true,
+  constraint plantilla_notificacion_pkey primary key (id),
+  constraint plantilla_notificacion_codigo_key unique (codigo),
+  constraint plantilla_notificacion_categoria_check check (categoria in ('VENCIMIENTO','RESUMEN','HOGAR','SISTEMA','MODERACION'))
 );
-CREATE TABLE public.notificacion (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  perfil_id uuid NOT NULL,
-  plantilla_id bigint NOT NULL,
-  despensa_item_id uuid,
-  datos jsonb,
-  estado text NOT NULL DEFAULT 'PENDIENTE'::text CHECK (estado = ANY (ARRAY['PENDIENTE'::text, 'ENVIADA'::text, 'LEIDA'::text, 'CANCELADA'::text, 'FALLIDA'::text])),
-  programada_para timestamp with time zone NOT NULL,
-  leida_en timestamp with time zone,
-  clave_dedup text NOT NULL UNIQUE,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT notificacion_pkey PRIMARY KEY (id),
-  CONSTRAINT notificacion_perfil_id_fkey FOREIGN KEY (perfil_id) REFERENCES public.perfil(id),
-  CONSTRAINT notificacion_plantilla_id_fkey FOREIGN KEY (plantilla_id) REFERENCES public.plantilla_notificacion(id),
-  CONSTRAINT notificacion_despensa_item_id_fkey FOREIGN KEY (despensa_item_id) REFERENCES public.despensa_item(id)
+
+create table public.preferencia_notificacion (
+  id                 uuid not null default gen_random_uuid(),
+  perfil_id          uuid not null,
+  plantilla_id       bigint not null,
+  habilitada         boolean not null default true,
+  dias_anticipacion  smallint,
+  hora_envio         time,
+  constraint preferencia_notificacion_pkey primary key (id),
+  constraint preferencia_notificacion_perfil_id_plantilla_id_key unique (perfil_id, plantilla_id),
+  constraint preferencia_notificacion_perfil_id_fkey foreign key (perfil_id) references public.perfil(id) on delete cascade,
+  constraint preferencia_notificacion_plantilla_id_fkey foreign key (plantilla_id) references public.plantilla_notificacion(id),
+  constraint preferencia_notificacion_dias_anticipacion_check check (dias_anticipacion >= 0)
 );
-CREATE TABLE public.envio_notificacion (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  notificacion_id uuid NOT NULL,
-  dispositivo_id uuid,
-  canal text NOT NULL CHECK (canal = ANY (ARRAY['PUSH'::text, 'EMAIL'::text, 'IN_APP'::text])),
-  resultado text NOT NULL CHECK (resultado = ANY (ARRAY['OK'::text, 'ERROR'::text, 'TOKEN_INVALIDO'::text])),
-  mensaje_error text,
-  enviado_en timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT envio_notificacion_pkey PRIMARY KEY (id),
-  CONSTRAINT envio_notificacion_dispositivo_id_fkey FOREIGN KEY (dispositivo_id) REFERENCES public.dispositivo(id),
-  CONSTRAINT envio_notificacion_notificacion_id_fkey FOREIGN KEY (notificacion_id) REFERENCES public.notificacion(id)
+
+create table public.notificacion (
+  id                uuid not null default gen_random_uuid(),
+  perfil_id         uuid not null,
+  plantilla_id      bigint not null,
+  despensa_item_id  uuid,
+  datos             jsonb,
+  estado            text not null default 'PENDIENTE',
+  programada_para   timestamptz not null,
+  leida_en          timestamptz,
+  clave_dedup       text not null,
+  created_at        timestamptz not null default now(),
+  constraint notificacion_pkey primary key (id),
+  -- evita mandar dos veces la misma alerta por el mismo item
+  constraint notificacion_clave_dedup_key unique (clave_dedup),
+  constraint notificacion_perfil_id_fkey foreign key (perfil_id) references public.perfil(id) on delete cascade,
+  constraint notificacion_plantilla_id_fkey foreign key (plantilla_id) references public.plantilla_notificacion(id),
+  constraint notificacion_despensa_item_id_fkey foreign key (despensa_item_id) references public.despensa_item(id) on delete set null,
+  constraint notificacion_estado_check check (estado in ('PENDIENTE','ENVIADA','LEIDA','CANCELADA','FALLIDA'))
 );
-CREATE TABLE public.lista_compra (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  hogar_id uuid NOT NULL,
-  nombre text NOT NULL,
-  estado text NOT NULL DEFAULT 'ABIERTA'::text CHECK (estado = ANY (ARRAY['ABIERTA'::text, 'CERRADA'::text, 'ARCHIVADA'::text])),
-  creada_por uuid NOT NULL,
-  creada_en timestamp with time zone NOT NULL DEFAULT now(),
-  cerrada_en timestamp with time zone,
-  CONSTRAINT lista_compra_pkey PRIMARY KEY (id),
-  CONSTRAINT lista_compra_hogar_id_fkey FOREIGN KEY (hogar_id) REFERENCES public.hogar(id),
-  CONSTRAINT lista_compra_creada_por_fkey FOREIGN KEY (creada_por) REFERENCES public.perfil(id)
+
+create table public.envio_notificacion (
+  id               uuid not null default gen_random_uuid(),
+  notificacion_id  uuid not null,
+  dispositivo_id   uuid,
+  canal            text not null,
+  resultado        text not null,
+  mensaje_error    text,
+  enviado_en       timestamptz not null default now(),
+  constraint envio_notificacion_pkey primary key (id),
+  constraint envio_notificacion_notificacion_id_fkey foreign key (notificacion_id) references public.notificacion(id) on delete cascade,
+  constraint envio_notificacion_dispositivo_id_fkey foreign key (dispositivo_id) references public.dispositivo(id) on delete set null,
+  constraint envio_notificacion_canal_check check (canal in ('PUSH','EMAIL','IN_APP')),
+  constraint envio_notificacion_resultado_check check (resultado in ('OK','ERROR','TOKEN_INVALIDO'))
 );
-CREATE TABLE public.lista_compra_item (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  lista_id uuid NOT NULL,
-  producto_id uuid,
-  alimento_id bigint,
-  cantidad numeric NOT NULL CHECK (cantidad > 0::numeric),
-  unidad text NOT NULL CHECK (unidad = ANY (ARRAY['g'::text, 'kg'::text, 'ml'::text, 'l'::text, 'un'::text])),
-  origen text NOT NULL DEFAULT 'MANUAL'::text CHECK (origen = ANY (ARRAY['MANUAL'::text, 'SUGERIDO_CONSUMO'::text, 'SUGERIDO_VENCIDO'::text])),
-  estado text NOT NULL DEFAULT 'PENDIENTE'::text CHECK (estado = ANY (ARRAY['PENDIENTE'::text, 'COMPRADO'::text, 'DESCARTADO'::text])),
-  despensa_item_id uuid,
-  agregado_por uuid NOT NULL,
-  CONSTRAINT lista_compra_item_pkey PRIMARY KEY (id),
-  CONSTRAINT lista_compra_item_agregado_por_fkey FOREIGN KEY (agregado_por) REFERENCES public.perfil(id),
-  CONSTRAINT lista_compra_item_lista_id_fkey FOREIGN KEY (lista_id) REFERENCES public.lista_compra(id),
-  CONSTRAINT lista_compra_item_producto_id_fkey FOREIGN KEY (producto_id) REFERENCES public.producto(id),
-  CONSTRAINT lista_compra_item_alimento_id_fkey FOREIGN KEY (alimento_id) REFERENCES public.alimento(id),
-  CONSTRAINT lista_compra_item_despensa_item_id_fkey FOREIGN KEY (despensa_item_id) REFERENCES public.despensa_item(id)
+
+-- ---------------------------------------------------------------------
+-- 6. LISTA DE COMPRAS
+-- ---------------------------------------------------------------------
+
+create table public.lista_compra (
+  id           uuid not null default gen_random_uuid(),
+  hogar_id     uuid not null,
+  nombre       text not null,
+  estado       text not null default 'ABIERTA',
+  creada_por   uuid not null,
+  creada_en    timestamptz not null default now(),
+  cerrada_en   timestamptz,
+  constraint lista_compra_pkey primary key (id),
+  constraint lista_compra_hogar_id_fkey foreign key (hogar_id) references public.hogar(id) on delete cascade,
+  constraint lista_compra_creada_por_fkey foreign key (creada_por) references public.perfil(id),
+  constraint lista_compra_estado_check check (estado in ('ABIERTA','CERRADA','ARCHIVADA'))
 );
-CREATE TABLE public.rol (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  codigo text NOT NULL UNIQUE,
-  nombre text NOT NULL,
-  descripcion text,
-  es_sistema boolean NOT NULL DEFAULT false,
-  CONSTRAINT rol_pkey PRIMARY KEY (id)
+
+create table public.lista_compra_item (
+  id                uuid not null default gen_random_uuid(),
+  lista_id          uuid not null,
+  producto_id       uuid,
+  alimento_id       bigint,
+  cantidad          numeric(10,3) not null,
+  unidad            text not null,
+  origen            text not null default 'MANUAL',
+  estado            text not null default 'PENDIENTE',
+  despensa_item_id  uuid,
+  agregado_por      uuid not null,
+  constraint lista_compra_item_pkey primary key (id),
+  constraint lista_compra_item_lista_id_fkey foreign key (lista_id) references public.lista_compra(id) on delete cascade,
+  constraint lista_compra_item_producto_id_fkey foreign key (producto_id) references public.producto(id),
+  constraint lista_compra_item_alimento_id_fkey foreign key (alimento_id) references public.alimento(id),
+  constraint lista_compra_item_despensa_item_id_fkey foreign key (despensa_item_id) references public.despensa_item(id) on delete set null,
+  constraint lista_compra_item_agregado_por_fkey foreign key (agregado_por) references public.perfil(id),
+  constraint lista_compra_item_unidad_check check (unidad in ('g','kg','ml','l','un')),
+  constraint lista_compra_item_origen_check check (origen in ('MANUAL','SUGERIDO_CONSUMO','SUGERIDO_VENCIDO')),
+  constraint lista_compra_item_estado_check check (estado in ('PENDIENTE','COMPRADO','DESCARTADO')),
+  constraint lista_compra_item_cantidad_check check (cantidad > 0),
+  -- mismo arco exclusivo que despensa_item
+  constraint ck_litem_origen_ref check (num_nonnulls(producto_id, alimento_id) = 1)
 );
-CREATE TABLE public.permiso (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  codigo text NOT NULL UNIQUE,
-  descripcion text,
-  modulo text NOT NULL,
-  CONSTRAINT permiso_pkey PRIMARY KEY (id)
+
+-- ---------------------------------------------------------------------
+-- 7. ADMINISTRACION: ROLES Y PERMISOS
+-- ---------------------------------------------------------------------
+
+create table public.rol (
+  id           bigint generated by default as identity,
+  codigo       text not null,
+  nombre       text not null,
+  descripcion  text,
+  es_sistema   boolean not null default false,
+  constraint rol_pkey primary key (id),
+  constraint rol_codigo_key unique (codigo)
 );
-CREATE TABLE public.rol_permiso (
-  rol_id bigint NOT NULL,
-  permiso_id bigint NOT NULL,
-  CONSTRAINT rol_permiso_pkey PRIMARY KEY (rol_id, permiso_id),
-  CONSTRAINT rol_permiso_rol_id_fkey FOREIGN KEY (rol_id) REFERENCES public.rol(id),
-  CONSTRAINT rol_permiso_permiso_id_fkey FOREIGN KEY (permiso_id) REFERENCES public.permiso(id)
+
+create table public.permiso (
+  id           bigint generated by default as identity,
+  codigo       text not null,
+  descripcion  text,
+  modulo       text not null,
+  constraint permiso_pkey primary key (id),
+  constraint permiso_codigo_key unique (codigo)
 );
-CREATE TABLE public.perfil_rol (
-  perfil_id uuid NOT NULL,
-  rol_id bigint NOT NULL,
-  asignado_por uuid,
-  asignado_en timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT perfil_rol_pkey PRIMARY KEY (perfil_id, rol_id),
-  CONSTRAINT perfil_rol_perfil_id_fkey FOREIGN KEY (perfil_id) REFERENCES public.perfil(id),
-  CONSTRAINT perfil_rol_rol_id_fkey FOREIGN KEY (rol_id) REFERENCES public.rol(id),
-  CONSTRAINT perfil_rol_asignado_por_fkey FOREIGN KEY (asignado_por) REFERENCES public.perfil(id)
+
+create table public.rol_permiso (
+  rol_id      bigint not null,
+  permiso_id  bigint not null,
+  constraint rol_permiso_pkey primary key (rol_id, permiso_id),
+  constraint rol_permiso_rol_id_fkey foreign key (rol_id) references public.rol(id) on delete cascade,
+  constraint rol_permiso_permiso_id_fkey foreign key (permiso_id) references public.permiso(id) on delete cascade
 );
-CREATE TABLE public.solicitud_moderacion (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  tipo text NOT NULL CHECK (tipo = ANY (ARRAY['PRODUCTO_NUEVO'::text, 'ALIMENTO_NUEVO'::text, 'CORRECCION'::text, 'DUPLICADO'::text])),
-  entidad text NOT NULL,
-  entidad_id text,
-  payload jsonb,
-  estado text NOT NULL DEFAULT 'PENDIENTE'::text CHECK (estado = ANY (ARRAY['PENDIENTE'::text, 'EN_REVISION'::text, 'APROBADA'::text, 'RECHAZADA'::text])),
-  prioridad smallint NOT NULL DEFAULT 3 CHECK (prioridad >= 1 AND prioridad <= 5),
-  solicitado_por uuid NOT NULL,
-  solicitado_en timestamp with time zone NOT NULL DEFAULT now(),
-  revisado_por uuid,
-  revisado_en timestamp with time zone,
-  resolucion_nota text,
-  CONSTRAINT solicitud_moderacion_pkey PRIMARY KEY (id),
-  CONSTRAINT solicitud_moderacion_solicitado_por_fkey FOREIGN KEY (solicitado_por) REFERENCES public.perfil(id),
-  CONSTRAINT solicitud_moderacion_revisado_por_fkey FOREIGN KEY (revisado_por) REFERENCES public.perfil(id)
+
+create table public.perfil_rol (
+  perfil_id     uuid not null,
+  rol_id        bigint not null,
+  asignado_por  uuid,
+  asignado_en   timestamptz not null default now(),
+  constraint perfil_rol_pkey primary key (perfil_id, rol_id),
+  constraint perfil_rol_perfil_id_fkey foreign key (perfil_id) references public.perfil(id) on delete cascade,
+  constraint perfil_rol_rol_id_fkey foreign key (rol_id) references public.rol(id),
+  constraint perfil_rol_asignado_por_fkey foreign key (asignado_por) references public.perfil(id) on delete set null
 );
-CREATE TABLE public.motivo_sancion (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  codigo text NOT NULL UNIQUE,
-  nombre text NOT NULL,
-  gravedad smallint NOT NULL CHECK (gravedad >= 1 AND gravedad <= 5),
-  CONSTRAINT motivo_sancion_pkey PRIMARY KEY (id)
+
+-- ---------------------------------------------------------------------
+-- 8. ADMINISTRACION: MODERACION Y SANCIONES
+-- ---------------------------------------------------------------------
+
+create table public.solicitud_moderacion (
+  id               uuid not null default gen_random_uuid(),
+  tipo             text not null,
+  entidad          text not null,
+  entidad_id       text,
+  payload          jsonb,
+  estado           text not null default 'PENDIENTE',
+  prioridad        smallint not null default 3,
+  solicitado_por   uuid not null,
+  solicitado_en    timestamptz not null default now(),
+  revisado_por     uuid,
+  revisado_en      timestamptz,
+  resolucion_nota  text,
+  constraint solicitud_moderacion_pkey primary key (id),
+  constraint solicitud_moderacion_solicitado_por_fkey foreign key (solicitado_por) references public.perfil(id),
+  constraint solicitud_moderacion_revisado_por_fkey foreign key (revisado_por) references public.perfil(id) on delete set null,
+  constraint solicitud_moderacion_tipo_check check (tipo in ('PRODUCTO_NUEVO','ALIMENTO_NUEVO','CORRECCION','DUPLICADO')),
+  constraint solicitud_moderacion_estado_check check (estado in ('PENDIENTE','EN_REVISION','APROBADA','RECHAZADA')),
+  constraint solicitud_moderacion_prioridad_check check (prioridad between 1 and 5),
+  -- resuelta si y solo si quedo registrado quien y cuando la reviso
+  constraint ck_solmod_revision check ((estado in ('APROBADA','RECHAZADA')) = (revisado_por is not null and revisado_en is not null))
 );
-CREATE TABLE public.sancion (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  perfil_id uuid NOT NULL,
-  tipo text NOT NULL CHECK (tipo = ANY (ARRAY['ADVERTENCIA'::text, 'SUSPENSION'::text, 'BANEO'::text])),
-  motivo_id bigint NOT NULL,
-  detalle text,
-  inicia_en timestamp with time zone NOT NULL DEFAULT now(),
-  expira_en timestamp with time zone,
-  estado text NOT NULL DEFAULT 'ACTIVA'::text CHECK (estado = ANY (ARRAY['ACTIVA'::text, 'CUMPLIDA'::text, 'REVOCADA'::text])),
-  aplicada_por uuid NOT NULL,
-  revocada_por uuid,
-  revocada_en timestamp with time zone,
-  nota_revocacion text,
-  CONSTRAINT sancion_pkey PRIMARY KEY (id),
-  CONSTRAINT sancion_perfil_id_fkey FOREIGN KEY (perfil_id) REFERENCES public.perfil(id),
-  CONSTRAINT sancion_motivo_id_fkey FOREIGN KEY (motivo_id) REFERENCES public.motivo_sancion(id),
-  CONSTRAINT sancion_aplicada_por_fkey FOREIGN KEY (aplicada_por) REFERENCES public.perfil(id),
-  CONSTRAINT sancion_revocada_por_fkey FOREIGN KEY (revocada_por) REFERENCES public.perfil(id)
+
+create table public.motivo_sancion (
+  id        bigint generated by default as identity,
+  codigo    text not null,
+  nombre    text not null,
+  gravedad  smallint not null,
+  constraint motivo_sancion_pkey primary key (id),
+  constraint motivo_sancion_codigo_key unique (codigo),
+  constraint motivo_sancion_gravedad_check check (gravedad between 1 and 5)
 );
-CREATE TABLE public.auditoria (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  entidad text NOT NULL,
-  entidad_id text NOT NULL,
-  accion text NOT NULL CHECK (accion = ANY (ARRAY['INSERT'::text, 'UPDATE'::text, 'DELETE'::text, 'APROBAR'::text, 'RECHAZAR'::text, 'SANCIONAR'::text])),
-  perfil_id uuid,
-  antes jsonb,
-  despues jsonb,
-  fecha timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT auditoria_pkey PRIMARY KEY (id),
-  CONSTRAINT auditoria_perfil_id_fkey FOREIGN KEY (perfil_id) REFERENCES public.perfil(id)
+
+create table public.sancion (
+  id               uuid not null default gen_random_uuid(),
+  perfil_id        uuid not null,
+  tipo             text not null,
+  motivo_id        bigint not null,
+  detalle          text,
+  inicia_en        timestamptz not null default now(),
+  expira_en        timestamptz,
+  estado           text not null default 'ACTIVA',
+  aplicada_por     uuid not null,
+  revocada_por     uuid,
+  revocada_en      timestamptz,
+  nota_revocacion  text,
+  constraint sancion_pkey primary key (id),
+  constraint sancion_perfil_id_fkey foreign key (perfil_id) references public.perfil(id) on delete cascade,
+  constraint sancion_motivo_id_fkey foreign key (motivo_id) references public.motivo_sancion(id),
+  constraint sancion_aplicada_por_fkey foreign key (aplicada_por) references public.perfil(id),
+  constraint sancion_revocada_por_fkey foreign key (revocada_por) references public.perfil(id) on delete set null,
+  constraint sancion_tipo_check check (tipo in ('ADVERTENCIA','SUSPENSION','BANEO')),
+  constraint sancion_estado_check check (estado in ('ACTIVA','CUMPLIDA','REVOCADA')),
+  constraint ck_sancion_fechas check (expira_en is null or expira_en > inicia_en),
+  -- nadie puede sancionarse a si mismo
+  constraint ck_sancion_no_autosancion check (perfil_id <> aplicada_por),
+  -- revocada si y solo si quedo registrado quien y cuando la revoco
+  constraint ck_sancion_revocacion check ((estado = 'REVOCADA') = (revocada_por is not null and revocada_en is not null))
 );
-CREATE TABLE public.parametro (
-  clave text NOT NULL,
-  valor text NOT NULL,
-  tipo_dato text NOT NULL CHECK (tipo_dato = ANY (ARRAY['TEXTO'::text, 'ENTERO'::text, 'DECIMAL'::text, 'BOOLEANO'::text, 'JSON'::text])),
-  descripcion text,
-  actualizado_por uuid,
-  actualizado_en timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT parametro_pkey PRIMARY KEY (clave),
-  CONSTRAINT parametro_actualizado_por_fkey FOREIGN KEY (actualizado_por) REFERENCES public.perfil(id)
+
+-- ---------------------------------------------------------------------
+-- 9. ADMINISTRACION: PARAMETROS, AUDITORIA Y LOGS
+-- ---------------------------------------------------------------------
+
+create table public.parametro (
+  clave            text not null,
+  valor            text not null,
+  tipo_dato        text not null,
+  descripcion      text,
+  actualizado_por  uuid,
+  actualizado_en   timestamptz not null default now(),
+  constraint parametro_pkey primary key (clave),
+  constraint parametro_actualizado_por_fkey foreign key (actualizado_por) references public.perfil(id) on delete set null,
+  constraint parametro_tipo_dato_check check (tipo_dato in ('TEXTO','ENTERO','DECIMAL','BOOLEANO','JSON'))
 );
-CREATE TABLE public.job_ejecucion (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  job_codigo text NOT NULL,
-  estado text NOT NULL CHECK (estado = ANY (ARRAY['EN_CURSO'::text, 'OK'::text, 'PARCIAL'::text, 'ERROR'::text])),
-  iniciado_en timestamp with time zone NOT NULL DEFAULT now(),
-  finalizado_en timestamp with time zone,
-  registros_ok integer NOT NULL DEFAULT 0 CHECK (registros_ok >= 0),
-  registros_error integer NOT NULL DEFAULT 0 CHECK (registros_error >= 0),
-  mensaje_error text,
-  resumen jsonb,
-  CONSTRAINT job_ejecucion_pkey PRIMARY KEY (id)
+
+create table public.auditoria (
+  id          uuid not null default gen_random_uuid(),
+  entidad     text not null,
+  entidad_id  text not null,
+  accion      text not null,
+  perfil_id   uuid,
+  antes       jsonb,
+  despues     jsonb,
+  fecha       timestamptz not null default now(),
+  constraint auditoria_pkey primary key (id),
+  constraint auditoria_perfil_id_fkey foreign key (perfil_id) references public.perfil(id) on delete set null,
+  constraint auditoria_accion_check check (accion in ('INSERT','UPDATE','DELETE','APROBAR','RECHAZAR','SANCIONAR'))
 );
-CREATE TABLE public.log_evento (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  nivel text NOT NULL CHECK (nivel = ANY (ARRAY['DEBUG'::text, 'INFO'::text, 'WARN'::text, 'ERROR'::text])),
-  origen text NOT NULL CHECK (origen = ANY (ARRAY['APP_MOVIL'::text, 'WEB_ADMIN'::text, 'API'::text, 'JOB'::text])),
-  codigo text,
-  mensaje text NOT NULL,
-  contexto jsonb,
-  job_id uuid,
-  perfil_id uuid,
-  ocurrido_en timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT log_evento_pkey PRIMARY KEY (id),
-  CONSTRAINT log_evento_job_id_fkey FOREIGN KEY (job_id) REFERENCES public.job_ejecucion(id),
-  CONSTRAINT log_evento_perfil_id_fkey FOREIGN KEY (perfil_id) REFERENCES public.perfil(id)
+
+create table public.job_ejecucion (
+  id               uuid not null default gen_random_uuid(),
+  job_codigo       text not null,
+  estado           text not null,
+  iniciado_en      timestamptz not null default now(),
+  finalizado_en    timestamptz,
+  registros_ok     integer not null default 0,
+  registros_error  integer not null default 0,
+  mensaje_error    text,
+  resumen          jsonb,
+  constraint job_ejecucion_pkey primary key (id),
+  constraint job_ejecucion_estado_check check (estado in ('EN_CURSO','OK','PARCIAL','ERROR')),
+  constraint job_ejecucion_registros_ok_check check (registros_ok >= 0),
+  constraint job_ejecucion_registros_error_check check (registros_error >= 0)
 );
-CREATE TABLE public.compra (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  hogar_id uuid NOT NULL,
-  fecha date NOT NULL DEFAULT CURRENT_DATE,
-  lugar text,
-  total_clp integer CHECK (total_clp >= 0),
-  registrado_por uuid NOT NULL,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT compra_pkey PRIMARY KEY (id),
-  CONSTRAINT compra_hogar_id_fkey FOREIGN KEY (hogar_id) REFERENCES public.hogar(id),
-  CONSTRAINT compra_registrado_por_fkey FOREIGN KEY (registrado_por) REFERENCES public.perfil(id)
+
+create table public.log_evento (
+  id           uuid not null default gen_random_uuid(),
+  nivel        text not null,
+  origen       text not null,
+  codigo       text,
+  mensaje      text not null,
+  contexto     jsonb,
+  job_id       uuid,
+  perfil_id    uuid,
+  ocurrido_en  timestamptz not null default now(),
+  constraint log_evento_pkey primary key (id),
+  constraint log_evento_job_id_fkey foreign key (job_id) references public.job_ejecucion(id) on delete set null,
+  constraint log_evento_perfil_id_fkey foreign key (perfil_id) references public.perfil(id) on delete set null,
+  constraint log_evento_nivel_check check (nivel in ('DEBUG','INFO','WARN','ERROR')),
+  constraint log_evento_origen_check check (origen in ('APP_MOVIL','WEB_ADMIN','API','JOB'))
 );
+
+-- =====================================================================
+-- INDICES UNICOS PARCIALES
+-- =====================================================================
+-- No son restricciones de tabla (PostgreSQL no permite un UNIQUE con
+-- condicion WHERE), pero hacen cumplir dos reglas del modelo:
+--   1. Un codigo de barras estandar identifica UN solo producto global.
+--   2. Dentro de un hogar, un codigo no se puede repetir; el mismo codigo
+--      interno si puede existir en hogares distintos.
+
+create unique index ux_producto_codigo_global
+  on public.producto (codigo)
+  where hogar_id is null and tipo_codigo in ('EAN13','EAN8','UPC');
+
+create unique index ux_producto_codigo_hogar
+  on public.producto (hogar_id, codigo)
+  where hogar_id is not null and codigo is not null;
