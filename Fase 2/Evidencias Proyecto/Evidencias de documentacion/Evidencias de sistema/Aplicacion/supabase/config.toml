@@ -1,0 +1,5 @@
+[functions.m08-preflight-cuenta-local]
+verify_jwt = false
+
+[functions.m08-confirmar-cuenta-local]
+verify_jwt = false

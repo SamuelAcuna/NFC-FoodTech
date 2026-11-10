@@ -1,0 +1,1 @@
+{"type":"module","scripts":{"test":"node --experimental-strip-types --test tests/m08.test.mjs"}}
