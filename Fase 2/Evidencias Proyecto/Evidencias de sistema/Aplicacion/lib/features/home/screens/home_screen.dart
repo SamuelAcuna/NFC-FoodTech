@@ -284,7 +284,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         ids: items.keys.toList(),
         desde: DateTime(ahora.year, ahora.month - 2),
         hasta: DateTime(ahora.year, ahora.month + 1),
-        tipos: ['DESCARTE'],
+        tipos: ['CONSUMO', 'DESCARTE'],
       );
       final ids = ingresos
           .map((i) => (i['alimento_id'] as num).toInt())

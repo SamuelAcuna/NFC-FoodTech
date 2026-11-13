@@ -4,7 +4,9 @@ class MesResumenHogar {
   final DateTime mes;
   final PresentacionPerdidaEconomica perdida;
 
-  const MesResumenHogar(this.mes, this.perdida);
+  final double? porcentajeDesperdicio;
+
+  const MesResumenHogar(this.mes, this.perdida, this.porcentajeDesperdicio);
 }
 
 List<MesResumenHogar> calcularResumenHogar({
@@ -29,6 +31,7 @@ List<MesResumenHogar> calcularResumenHogar({
       motivosPorId: const {},
       ahora: mes,
     );
+    final aprovechamiento = resumen.aprovechamientoMes;
     return MesResumenHogar(
       mes,
       PresentacionPerdidaEconomica(
@@ -36,6 +39,9 @@ List<MesResumenHogar> calcularResumenHogar({
         descartesConPrecio: resumen.descartesConPrecio,
         costoConocido: resumen.costoConocido,
       ),
+      aprovechamiento == null || !aprovechamiento.isFinite
+          ? null
+          : 100 - aprovechamiento,
     );
   });
 }

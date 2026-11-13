@@ -79,6 +79,7 @@ class ResumenHogarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final lista = meses;
     final actual = lista?.last.perdida;
+    final porcentaje = lista?.last.porcentajeDesperdicio;
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(18),
@@ -119,9 +120,12 @@ class ResumenHogarCard extends StatelessWidget {
                     context,
                     clave: 'porcentaje-desperdicio-hogar',
                     titulo: 'Porcentaje de desperdicio',
-                    valor: 'Sin datos suficientes',
-                    detalle:
-                        'No hay un porcentaje mensual de desperdicio del hogar definido en Indicadores.',
+                    valor: porcentaje == null
+                        ? 'Sin datos suficientes'
+                        : '${porcentaje.toStringAsFixed(1).replaceFirst(RegExp(r'\.0$'), '').replaceFirst('.', ',')} %',
+                    detalle: porcentaje == null
+                        ? 'No hay salidas válidas registradas en el mes.'
+                        : 'Promedio descartado por ingreso con salidas registradas este mes.',
                   );
                   final horizontal =
                       constraints.maxWidth >= 340 &&

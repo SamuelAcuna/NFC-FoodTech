@@ -7,6 +7,7 @@ List<MesResumenHogar> resumen({
   int? precio = 2000,
   bool segundoSinPrecio = false,
   bool sinMovimientos = false,
+  bool soloConsumo = false,
 }) {
   final ahora = DateTime(2026, 1, 20);
   return calcularResumenHogar(
@@ -26,7 +27,7 @@ List<MesResumenHogar> resumen({
     movimientos: sinMovimientos
         ? []
         : [
-            for (final mes in [11, 12, 1])
+            for (final mes in (soloConsumo ? [11, 12] : [11, 12, 1]))
               {
                 'despensa_item_id': 'a',
                 'tipo': 'DESCARTE',
@@ -66,6 +67,7 @@ void main() {
       ]);
       expect(meses.map((m) => m.perdida.valorClp), [400, 400, 400]);
       expect(meses.last.perdida.descartes, 1);
+      expect(meses.map((m) => m.porcentajeDesperdicio), [100, 100, 25]);
     },
   );
   test(
@@ -82,6 +84,56 @@ void main() {
       );
     },
   );
+  test('consumo sin descarte distingue cero de ausencia de movimientos', () {
+    expect(resumen(soloConsumo: true).last.porcentajeDesperdicio, 0);
+    expect(resumen(sinMovimientos: true).last.porcentajeDesperdicio, isNull);
+    expect(resumen(soloConsumo: true).last.perdida.valorClp, 0);
+  });
+
+  test('promedia por ingreso y descarta salidas sin datos válidos', () {
+    final ahora = DateTime(2026, 1, 20);
+    Map<String, dynamic> salida(String id, String tipo, Object? cantidad) => {
+      'despensa_item_id': id,
+      'tipo': tipo,
+      'cantidad': cantidad,
+      'fecha': ahora.toIso8601String(),
+    };
+    final movimientos = [
+      salida('a', 'CONSUMO', 600),
+      salida('a', 'DESCARTE', 200),
+      salida('b', 'DESCARTE', 1),
+      salida('c', 'CONSUMO', 2),
+      salida('a', 'DESCARTE', 0),
+      salida('a', 'DESCARTE', null),
+      salida('a', 'DESCARTE', -2),
+      salida('a', 'DESCARTE', 100)..remove('fecha'),
+      salida('otro', 'DESCARTE', 2),
+    ];
+    final items = {
+      'a': <String, dynamic>{'alimento_id': 1},
+      'b': <String, dynamic>{'alimento_id': 2},
+      'c': <String, dynamic>{'alimento_id': 3},
+    };
+    final alimentos = {
+      1: <String, dynamic>{'unidad_base': 'g'},
+      2: <String, dynamic>{'unidad_base': 'ml'},
+      3: <String, dynamic>{'unidad_base': 'un'},
+    };
+
+    double? porcentaje(Map<String, Map<String, dynamic>> ingresos) =>
+        calcularResumenHogar(
+          ahora: ahora,
+          items: ingresos,
+          movimientos: movimientos,
+          alimentos: alimentos,
+        ).last.porcentajeDesperdicio;
+
+    expect(porcentaje(items), closeTo((25 + 100 + 0) / 3, 1e-10));
+    expect(porcentaje({'b': items['b']!}), 100);
+    expect(porcentaje({'c': items['c']!}), 0);
+    expect(porcentaje({}), isNull);
+  });
+
   for (final oscuro in [false, true]) {
     for (final ancho in [320.0, 600.0]) {
       testWidgets('dos indicadores adaptables sin gráficos ($oscuro, $ancho)', (
@@ -116,7 +168,7 @@ void main() {
         expect(find.textContaining('Subtotal conocido'), findsWidgets);
         expect(find.byType(FractionallySizedBox), findsNothing);
         expect(find.text('Porcentaje de desperdicio'), findsOneWidget);
-        expect(find.text('Sin datos suficientes'), findsOneWidget);
+        expect(find.text('62,5 %'), findsOneWidget);
         expect(find.text('Pérdida económica estimada'), findsOneWidget);
         final perdida = tester.getRect(
           find.byKey(const ValueKey('perdida-hogar')),
@@ -157,9 +209,28 @@ void main() {
       expect(find.text(r'$0 CLP'), findsOneWidget);
       expect(find.text('No existen descartes registrados.'), findsOneWidget);
       expect(find.text('Sin datos suficientes'), findsOneWidget);
-      expect(find.text('0%'), findsNothing);
+      expect(find.text('0 %'), findsNothing);
     },
   );
+  testWidgets('muestra cero por ciento cuando solo hubo consumo', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: SingleChildScrollView(
+            child: ResumenHogarCard(
+              meses: resumen(soloConsumo: true),
+              cargando: false,
+              error: false,
+              onReintentar: () {},
+            ),
+          ),
+        ),
+      ),
+    );
+    expect(find.text('0 %'), findsOneWidget);
+    expect(find.text('Sin datos suficientes'), findsNothing);
+  });
+
   testWidgets(
     'sin precios no se muestra cero y con precio cero se conserva valor conocido',
     (tester) async {
