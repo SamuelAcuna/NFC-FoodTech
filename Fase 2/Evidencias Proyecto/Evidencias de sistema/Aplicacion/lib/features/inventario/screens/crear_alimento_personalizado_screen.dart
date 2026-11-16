@@ -131,7 +131,7 @@ class _CrearAlimentoPersonalizadoScreenState
             'categoria_id': _categoriaId,
             'unidad_base': _unidadBase,
             'es_perecible': _esPerecible,
-            'estado': 'LOCAL',
+            'estado': 'PROPUESTO',
             'hogar_id': hogarId,
             'activo': true,
           })
