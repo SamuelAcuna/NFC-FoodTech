@@ -6,10 +6,10 @@ Desde esta carpeta:
 
 ```powershell
 flutter pub get
-flutter run -d chrome --dart-define=SUPABASE_URL=... --dart-define=SUPABASE_ANON_KEY=...
+flutter run -d chrome --dart-define=SUPABASE_URL=https://dpsbrniclxojsoxhgmjv.supabase.co --dart-define=SUPABASE_ANON_KEY=sb_publishable_EgZru31XDlDHemo_-BqXKA_PbjbdXFp
 ```
 
-Usa la URL y la clave pública anon del proyecto mediante esos parámetros. No guardes credenciales en archivos ni uses claves privilegiadas. Sin parámetros se muestra una pantalla de error de configuración.
+Los comandos ya incluyen la URL y la clave publicable del proyecto. Esa clave es pública por diseño (la protección de los datos la dan las políticas RLS de la base); nunca se usa la `service_role`. Sin parámetros se muestra una pantalla de error de configuración.
 
 ```powershell
 flutter analyze
@@ -29,7 +29,7 @@ Capas por feature en `lib/features/`; infraestructura compartida en `lib/core/`.
 Requiere Docker Desktop. Desde esta carpeta, en PowerShell (una línea por comando):
 
 ```powershell
-docker build -t nfc-admin --build-arg SUPABASE_URL=https://dpsbrniclxojsoxhgmjv.supabase.co --build-arg SUPABASE_ANON_KEY=<clave publicable> .
+docker build -t nfc-admin --build-arg SUPABASE_URL=https://dpsbrniclxojsoxhgmjv.supabase.co --build-arg SUPABASE_ANON_KEY=sb_publishable_EgZru31XDlDHemo_-BqXKA_PbjbdXFp .
 docker run -d -p 8090:80 --name nfc-admin nfc-admin
 ```
 
@@ -44,7 +44,7 @@ Requiere Docker Desktop iniciado con contenedores Linux. Ejecutar desde esta car
 
 ```powershell
 Copy-Item .env.example .env
-# Completar SUPABASE_URL y SUPABASE_ANON_KEY en .env con la URL y clave publicable.
+# .env.example ya trae la URL y la clave publicable del proyecto.
 docker compose up --build -d
 curl.exe --fail http://localhost:8090
 docker compose down
