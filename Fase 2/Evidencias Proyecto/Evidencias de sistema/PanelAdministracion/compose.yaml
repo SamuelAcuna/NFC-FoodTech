@@ -1,0 +1,16 @@
+# Panel de administración NFC-FoodTech: compila Flutter Web y lo sirve con nginx.
+# Uso: copiar .env.example a .env, completar los valores y ejecutar
+#   docker compose up --build -d
+# Abrir http://localhost:8090
+services:
+  panel:
+    build:
+      context: .
+      args:
+        SUPABASE_URL: ${SUPABASE_URL}
+        SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+    image: nfc-admin
+    container_name: nfc-admin
+    ports:
+      - "8090:80"
+    restart: unless-stopped

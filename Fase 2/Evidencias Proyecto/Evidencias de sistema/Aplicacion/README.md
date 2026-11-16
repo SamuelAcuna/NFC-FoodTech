@@ -2,9 +2,9 @@
 
 ## Descripción
 
-NFC-FoodTech es una aplicación en desarrollo que busca ayudar a las personas a gestionar los alimentos de su hogar, reducir el desperdicio alimentario y aprovechar mejor sus recursos económicos.
+NFC-FoodTech es una aplicación Android que ayuda a las personas a gestionar los alimentos de su hogar, reducir el desperdicio alimentario y aprovechar mejor sus recursos económicos.
 
-La aplicación permitirá registrar alimentos manualmente, administrar el inventario, llevar un seguimiento del consumo y consultar información sobre el desperdicio de alimentos.
+La aplicación permite registrar alimentos, administrar el inventario compartido del hogar, registrar consumos y descartes, planificar compras y consultar indicadores de desperdicio.
 
 ## Funcionalidades
 
@@ -26,7 +26,6 @@ La aplicación permitirá registrar alimentos manualmente, administrar el invent
 - Estimación de pérdidas económicas asociadas al desperdicio.
 - Identificación de alimentos próximos a su fecha estimada de caducidad.
 
-*Las funcionalidades se desarrollarán progresivamente según el avance del proyecto.*
 
 ## Tecnologías utilizadas
 
@@ -43,7 +42,7 @@ La aplicación permitirá registrar alimentos manualmente, administrar el invent
 - Dart SDK, incluido con Flutter.
 - Visual Studio Code u otro editor compatible.
 - Un proyecto configurado en Supabase.
-- Un navegador compatible o un dispositivo para realizar pruebas.
+- Un dispositivo o emulador Android para ejecutar la aplicación.
 
 ## Configuración inicial
 
@@ -56,7 +55,7 @@ La aplicación permitirá registrar alimentos manualmente, administrar el invent
 2. Ingresar a la carpeta del proyecto:
 
    ```bash
-   cd nfc_foodtech
+   cd "Fase 2/Evidencias Proyecto/Evidencias de sistema/Aplicacion"
    ```
 
 3. Instalar las dependencias:
@@ -65,13 +64,21 @@ La aplicación permitirá registrar alimentos manualmente, administrar el invent
    flutter pub get
    ```
 
-4. Configurar la URL del proyecto Supabase y su clave pública en el archivo de configuración correspondiente.
+4. La URL del proyecto Supabase y su clave publicable vienen por defecto en `lib/config.dart` y pueden reemplazarse con `--dart-define`.
 
-5. Ejecutar la aplicación en Chrome:
+5. Ejecutar la aplicación en un dispositivo o emulador Android:
 
    ```bash
-   flutter run -d chrome
+   flutter run
    ```
+
+6. Ejecutar las pruebas automatizadas:
+
+   ```bash
+   flutter test
+   ```
+
+Los pasos para generar el APK están en `docs/ANDROID.md` y en el Manual Técnico.
 
 ## Configuración de Supabase
 
@@ -90,20 +97,20 @@ La clave pública está diseñada para utilizarse en el cliente. La protección 
 
 ```text
 lib/
-├── main.dart
-├── config.dart
-├── theme.dart
-└── screens/
-    ├── inicio_screen.dart
-    ├── registro_screen.dart
-    └── home_screen.dart
+├── main.dart, config.dart, theme_controller.dart
+├── features/   módulos: auth, home, hogar, inventario, compras,
+│               alertas, indicadores, perfil y configuracion
+├── screens/    identificación y eliminación de cuenta
+├── models/     modelos de datos
+├── services/   notificaciones locales y eliminación de cuenta
+└── shared/     componentes y lógica compartida
+test/           pruebas automatizadas
+supabase/       Edge Functions de la aplicación
 ```
-
-La estructura podrá ampliarse a medida que se incorporen las funcionalidades de inventario, consumo y análisis.
 
 ## Estado del proyecto
 
-El proyecto se encuentra en etapa de desarrollo. Actualmente, el trabajo se centra en la configuración de Flutter, la autenticación de usuarios y la preparación de la estructura para implementar la gestión de alimentos.
+Versión entregada al cierre de la Fase 2. Incluye autenticación (correo y Google), hogares con invitación por código, inventario por ubicación, consumo y descarte con motivo, lista de compras con sugerencias, alertas de vencimiento e indicadores de desperdicio. Cuenta con 347 pruebas automatizadas aprobadas.
 
 ## Objetivo
 
@@ -112,5 +119,5 @@ Desarrollar una herramienta digital sencilla y práctica que permita mejorar la 
 ## Autores
 
 Rodrigo Casanova
-Jose Paillan 
+José Paillán 
 Samuel Acuña

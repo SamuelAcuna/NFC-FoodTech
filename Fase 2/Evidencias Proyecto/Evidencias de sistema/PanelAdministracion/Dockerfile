@@ -1,9 +1,8 @@
-# Etapa 1: compilar con la misma version de Flutter que se usa en local (3.47.7).
-# Se clona desde GitHub porque las imagenes publicas no tienen ese tag exacto.
-FROM debian:bookworm-slim AS build
-RUN apt-get update \
- && apt-get install -y --no-install-recommends git curl unzip xz-utils zip ca-certificates \
- && rm -rf /var/lib/apt/lists/*
+# Etapa 1: compilar con Flutter 3.47.7 (misma version que en local).
+# Parte de la imagen de cirruslabs (trae git, curl y unzip; no usa apt-get,
+# que falla en redes que bloquean deb.debian.org) e instala encima la version
+# exacta desde GitHub.
+FROM ghcr.io/cirruslabs/flutter:stable AS build
 ARG FLUTTER_VERSION=3.47.7
 RUN git clone --depth 1 --branch ${FLUTTER_VERSION} https://github.com/flutter/flutter.git /opt/flutter
 ENV PATH="/opt/flutter/bin:${PATH}"

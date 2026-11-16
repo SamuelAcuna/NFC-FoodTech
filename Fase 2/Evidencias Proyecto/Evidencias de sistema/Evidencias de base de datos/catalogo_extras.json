@@ -1,0 +1,1146 @@
+{
+  "tipos": null,
+  "vistas": null,
+  "acl_esquemas": [
+    {
+      "acl": [
+        "pg_database_owner=UC/pg_database_owner",
+        "=U/pg_database_owner",
+        "postgres=U/pg_database_owner",
+        "anon=U/pg_database_owner",
+        "authenticated=U/pg_database_owner",
+        "service_role=U/pg_database_owner"
+      ],
+      "nombre": "public",
+      "propietario": "pg_database_owner"
+    },
+    {
+      "acl": [
+        "postgres=UC/postgres"
+      ],
+      "nombre": "nfc_m28_privado",
+      "propietario": "postgres"
+    }
+  ],
+  "acl_funciones": [
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "rls_auto_enable",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "=X/postgres",
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "set_updated_at",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "handle_new_user",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "=X/postgres",
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "cuerpo bigint",
+      "nombre": "dv_rut",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_permiso text",
+      "nombre": "es_admin",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "admin_proteger_ultimo_admin",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "mi_contexto_admin",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "admin_categoria_validar_arbol",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "admin_contar_propuestos",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "admin_listar_propuestos",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_id bigint, p_nombre text, p_categoria_id bigint, p_unidad_base text, p_es_perecible boolean, p_vida_util_dias_ref integer",
+      "nombre": "admin_aprobar_propuesto",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_id bigint",
+      "nombre": "admin_rechazar_propuesto",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "admin_listar_agentes_soporte",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid",
+      "nombre": "generar_invitacion",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_id uuid, p_agente uuid",
+      "nombre": "admin_soporte_asignar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_codigo text",
+      "nombre": "unirse_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid, p_perfil_id uuid, p_rol text",
+      "nombre": "cambiar_rol_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid, p_nuevo_admin uuid",
+      "nombre": "transferir_administracion_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid, p_perfil_id uuid",
+      "nombre": "revocar_miembro_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_usuario uuid",
+      "nombre": "m08_preflight_eliminacion_prueba",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "admin_auditar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_id uuid, p_respuesta text",
+      "nombre": "admin_soporte_responder",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_desde date, p_hasta date, p_entidad text, p_accion text, p_limite integer, p_offset integer",
+      "nombre": "admin_listar_auditoria",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "admin_perfil_proteger_estado",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_busqueda text, p_estado text, p_registro_desde date, p_registro_hasta date, p_actividad text, p_limite integer, p_offset integer",
+      "nombre": "admin_listar_usuarios",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_perfil_id uuid, p_estado text, p_motivo text",
+      "nombre": "admin_cambiar_estado_cuenta",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_id uuid",
+      "nombre": "admin_soporte_cerrar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_estado text, p_limite integer, p_offset integer",
+      "nombre": "admin_listar_soporte",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "admin_listar_administradores",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "admin_dashboard",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_email text, p_rol_codigo text",
+      "nombre": "admin_asignar_rol",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_perfil_id uuid, p_rol_codigo text",
+      "nombre": "admin_quitar_rol",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid",
+      "nombre": "es_admin_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_lista_item_id uuid, p_ubicacion text, p_fecha_vencimiento date, p_precio_clp integer",
+      "nombre": "m27_confirmar_compra_item",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid",
+      "nombre": "salir_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid",
+      "nombre": "es_miembro_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_perfil_id uuid",
+      "nombre": "comparte_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_busqueda text, p_actividad text, p_limite integer, p_offset integer",
+      "nombre": "admin_listar_hogares",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_clave text, p_valor text",
+      "nombre": "admin_actualizar_parametro",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_desde date, p_hasta date, p_agrupacion text",
+      "nombre": "admin_reporte_uso",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_desde date, p_hasta date, p_agrupacion text",
+      "nombre": "admin_reporte_desperdicio",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "=X/postgres",
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "agregar_creador_como_admin",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "=X/postgres",
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_despensa_item_id uuid, p_tipo text, p_cantidad numeric, p_tipo_desperdicio_id bigint",
+      "nombre": "registrar_movimiento_despensa",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_notificacion_id uuid",
+      "nombre": "marcar_notificacion_leida",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "=X/postgres",
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "registrar_ingreso_movimiento",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "m08_reactivar_cuenta",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "m08_desactivar_cuenta",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_usuario uuid, p_sesion uuid",
+      "nombre": "m08_verificar_sesion_prueba",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_usuario uuid, p_sesion uuid",
+      "nombre": "m08_iniciar_confirmacion_prueba",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "=X/postgres",
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "registrar_fecha_precio_compra",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid, p_nombre text, p_adultos smallint, p_menores smallint",
+      "nombre": "m15_guardar_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "m14_listar_hogares",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid",
+      "nombre": "m16_listar_miembros",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid, p_accion text, p_perfil_id uuid",
+      "nombre": "m16_gestionar_miembro",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid",
+      "nombre": "m17_generar_invitacion",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "p_codigo text",
+      "nombre": "m17_unirse_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "=X/postgres",
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "m19_autocalcular_vencimiento",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid, p_items jsonb",
+      "nombre": "m19_registrar_multiples",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres"
+      ],
+      "firma": "p_perfil_id uuid",
+      "nombre": "generar_alertas_programadas",
+      "esquema": "nfc_m28_privado",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "m28_generar_alertas_internas",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "p_item_id uuid, p_nueva_cantidad numeric, p_nueva_ubicacion text, p_cambiar_fecha boolean, p_nueva_fecha date, p_cambiar_precio boolean, p_nuevo_precio integer, p_cambiar_observaciones boolean, p_nuevas_observaciones text",
+      "nombre": "editar_item_inventario",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres"
+      ],
+      "firma": "p_perfil_id uuid",
+      "nombre": "cancelar_alertas_pendientes",
+      "esquema": "nfc_m28_privado",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "procesar_alertas_programadas",
+      "esquema": "nfc_m28_privado",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "",
+      "nombre": "m28_sincronizar_alertas",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "firma": "p_hogar_id uuid",
+      "nombre": "historial_traslados_hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    }
+  ],
+  "acl_relaciones": [
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres",
+        "authenticated=r/postgres"
+      ],
+      "nombre": "aceptacion_documentos",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres",
+        "authenticated=ar/postgres"
+      ],
+      "nombre": "perfil_identificacion",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=rwU/postgres",
+        "anon=rwU/postgres",
+        "authenticated=rwU/postgres",
+        "service_role=rwU/postgres"
+      ],
+      "nombre": "categoria_id_seq",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "categoria",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "hogar",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "hogar_miembro",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=rwU/postgres",
+        "anon=rwU/postgres",
+        "authenticated=rwU/postgres",
+        "service_role=rwU/postgres"
+      ],
+      "nombre": "alimento_id_seq",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "perfil",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "m08_confirmacion_eliminacion",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "tipo_desperdicio",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=rwU/postgres",
+        "anon=rwU/postgres",
+        "authenticated=rwU/postgres",
+        "service_role=rwU/postgres"
+      ],
+      "nombre": "tipo_desperdicio_id_seq",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=rDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "despensa_item",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=rDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "movimiento",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=rwU/postgres",
+        "anon=rwU/postgres",
+        "authenticated=rwU/postgres",
+        "service_role=rwU/postgres"
+      ],
+      "nombre": "plantilla_notificacion_id_seq",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "plantilla_notificacion",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "preferencia_notificacion",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres",
+        "authenticated=r/postgres"
+      ],
+      "nombre": "notificacion",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "lista_compra",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=rwU/postgres",
+        "anon=rwU/postgres",
+        "authenticated=rwU/postgres",
+        "service_role=rwU/postgres"
+      ],
+      "nombre": "rol_id_seq",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "lista_compra_item",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=rwU/postgres",
+        "anon=rwU/postgres",
+        "authenticated=rwU/postgres",
+        "service_role=rwU/postgres"
+      ],
+      "nombre": "permiso_id_seq",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "rol",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "permiso",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "rol_permiso",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "perfil_rol",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "alimento",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "parametro",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "authenticated=arm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "solicitud_soporte",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "region",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "comuna",
+      "esquema": "public",
+      "propietario": "postgres"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "nombre": "auditoria",
+      "esquema": "public",
+      "propietario": "postgres"
+    }
+  ],
+  "privilegios_por_defecto": [
+    {
+      "acl": [
+        "postgres=arwdDxtm/postgres",
+        "anon=arwdDxtm/postgres",
+        "authenticated=arwdDxtm/postgres",
+        "service_role=arwdDxtm/postgres"
+      ],
+      "rol": "postgres",
+      "tipo": "r",
+      "esquema": "public"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "rol": "postgres",
+      "tipo": "f",
+      "esquema": "public"
+    },
+    {
+      "acl": [
+        "postgres=rwU/postgres",
+        "anon=rwU/postgres",
+        "authenticated=rwU/postgres",
+        "service_role=rwU/postgres"
+      ],
+      "rol": "postgres",
+      "tipo": "S",
+      "esquema": "public"
+    },
+    {
+      "acl": [
+        "postgres=rwU/supabase_admin",
+        "anon=rwU/supabase_admin",
+        "authenticated=rwU/supabase_admin",
+        "service_role=rwU/supabase_admin"
+      ],
+      "rol": "supabase_admin",
+      "tipo": "S",
+      "esquema": "public"
+    },
+    {
+      "acl": [
+        "postgres=arwdDxtm/supabase_admin",
+        "anon=arwdDxtm/supabase_admin",
+        "authenticated=arwdDxtm/supabase_admin",
+        "service_role=arwdDxtm/supabase_admin"
+      ],
+      "rol": "supabase_admin",
+      "tipo": "r",
+      "esquema": "public"
+    },
+    {
+      "acl": [
+        "postgres=X/supabase_admin",
+        "anon=X/supabase_admin",
+        "authenticated=X/supabase_admin",
+        "service_role=X/supabase_admin"
+      ],
+      "rol": "supabase_admin",
+      "tipo": "f",
+      "esquema": "public"
+    }
+  ]
+}

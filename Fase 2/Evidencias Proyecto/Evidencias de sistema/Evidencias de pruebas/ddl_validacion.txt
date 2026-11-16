@@ -1,0 +1,5 @@
+pglast v8.8: 948 sentencias PostgreSQL parseadas sin error.
+No se aplicó el DDL ni se ejecutaron los cuerpos de funciones.
+Conteos del catálogo: {"tablas": 25, "columnas": 187, "constraints": 123, "fk": 42, "indices": 78, "triggers": 16, "funciones": 65, "politicas": 89, "rls": 25, "secuencias": 6, "extensiones": 6}
+AST: CREATE TABLE, FUNCTION, POLICY y TRIGGER coinciden con el catálogo.
+Verificación posterior de catálogo: PostgreSQL 17.6; public: 25 tablas y 62 funciones propias; nfc_m28_privado: 0 tablas y 3 funciones propias. Sin comentarios adicionales de políticas o secuencias.

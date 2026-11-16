@@ -1,0 +1,150 @@
+Resolving dependencies...
+Downloading packages...
+  app_links_linux 1.0.4 (1.0.5 available)
+  crypto 3.0.7 (3.0.8 available)
+  cupertino_ui 1.1.3 (1.1.6 available)
+  flutter_riverpod 3.4.3 (3.5.0 available)
+  flutter_svg 2.3.0 (2.3.4 available)
+  go_router 18.1.0 (18.1.4 available)
+  jni 1.1.0 (1.1.2 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  material_ui 1.7.0 (1.11.0 available)
+  meta 1.18.3 (1.19.0 available)
+  passkeys_platform_interface 2.10.0 (2.11.0 available)
+  petitparser 7.0.2 (7.1.0 available)
+  riverpod 3.4.3 (3.5.0 available)
+  shared_preferences_android 2.5.1 (2.5.5 available)
+  shared_preferences_foundation 2.5.7 (2.6.2 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_graphics 1.2.4 (1.3.1 available)
+  vector_graphics_codec 1.1.13 (1.2.0 available)
+  vector_graphics_compiler 1.3.2 (1.3.6 available)
+  vector_math 2.4.0 (2.4.4 available)
+  web 1.1.1 (1.1.2 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+22 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading E:/NFC-FoodTech/.tmp-pruebas/panel/test/administradores_test.dart
+00:00 +0: E:/NFC-FoodTech/.tmp-pruebas/panel/test/administradores_test.dart: solo errores de negocio permitidos
+00:00 +1: E:/NFC-FoodTech/.tmp-pruebas/panel/test/administradores_test.dart: roles desde repositorio y confirmación al quitar
+00:01 +2: E:/NFC-FoodTech/.tmp-pruebas/panel/test/administradores_test.dart: nuevo mensaje de roles propios en lista cerrada
+00:01 +3: E:/NFC-FoodTech/.tmp-pruebas/panel/test/administradores_test.dart: fila propia no permite quitar ninguno de sus roles
+00:03 +4: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +5: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +6: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +7: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +8: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +9: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +10: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +11: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +12: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +13: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +14: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +15: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +16: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +17: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +18: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +19: E:/NFC-FoodTech/.tmp-pruebas/panel/test/admin_shell_test.dart: AdminShell - responsividad y componentes visuales ancho 500 px (móvil): usa Drawer y oculta sidebar fija
+00:04 +20: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:05 +21: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:05 +22: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +23: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +24: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +25: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +26: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +27: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +28: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +29: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +30: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +31: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +32: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +33: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +34: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +35: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +36: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +37: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +38: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +39: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:06 +40: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:07 +41: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:07 +42: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:08 +43: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:08 +44: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:08 +45: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +46: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +47: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +48: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +49: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +50: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +51: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +52: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +53: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +54: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +55: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +56: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +57: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +58: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +59: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +60: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +61: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +62: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +63: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:09 +64: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:10 +65: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:10 +66: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:11 +67: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:11 +68: E:/NFC-FoodTech/.tmp-pruebas/panel/test/alimentos_logic_test.dart: Conteo vacío da cero y excepción da null
+00:11 +69: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:11 +70: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:11 +71: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:11 +72: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:11 +73: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:12 +74: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:12 +75: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:12 +76: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:12 +77: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:12 +78: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:12 +79: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 800.0
+00:12 +80: E:/NFC-FoodTech/.tmp-pruebas/panel/test/categorias_widgets_test.dart: Categorías filtra por nombre, muestra árbol y conteos desconocidos
+00:12 +81: E:/NFC-FoodTech/.tmp-pruebas/panel/test/categorias_widgets_test.dart: Categorías filtra por nombre, muestra árbol y conteos desconocidos
+00:12 +82: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 1200.0
+00:12 +83: E:/NFC-FoodTech/.tmp-pruebas/panel/test/app_test.dart: menú y navegación a ancho 1200.0
+00:13 +84: E:/NFC-FoodTech/.tmp-pruebas/panel/test/categorias_widgets_test.dart: Crear y editar categoría validan nombre y recargan tabla
+00:13 +85: E:/NFC-FoodTech/.tmp-pruebas/panel/test/categorias_widgets_test.dart: Padres del diálogo: solo raíces y nunca la misma categoría
+00:14 +86: E:/NFC-FoodTech/.tmp-pruebas/panel/test/categorias_widgets_test.dart: Activar/desactivar y borrar sin relaciones actualizan el listado
+00:14 +87: E:/NFC-FoodTech/.tmp-pruebas/panel/test/categorias_widgets_test.dart: Activar/desactivar y borrar sin relaciones actualizan el listado
+00:14 +88: E:/NFC-FoodTech/.tmp-pruebas/panel/test/hogares_test.dart: hogares por permiso, privacidad y debounce servidor
+00:14 +89: E:/NFC-FoodTech/.tmp-pruebas/panel/test/hogares_test.dart: hogares por permiso, privacidad y debounce servidor
+00:15 +90: E:/NFC-FoodTech/.tmp-pruebas/panel/test/hogares_test.dart: hogares por permiso, privacidad y debounce servidor
+00:15 +91: E:/NFC-FoodTech/.tmp-pruebas/panel/test/hogares_test.dart: hogares por permiso, privacidad y debounce servidor
+00:15 +92: E:/NFC-FoodTech/.tmp-pruebas/panel/test/hogares_test.dart: hogares por permiso, privacidad y debounce servidor
+00:15 +93: E:/NFC-FoodTech/.tmp-pruebas/panel/test/hogares_test.dart: hogares por permiso, privacidad y debounce servidor
+00:15 +94: E:/NFC-FoodTech/.tmp-pruebas/panel/test/hogares_test.dart: hogares por permiso, privacidad y debounce servidor
+00:15 +95: E:/NFC-FoodTech/.tmp-pruebas/panel/test/parametros_test.dart: guarda solo cambios y resume éxito y fallo sin exponer SQL
+00:15 +96: E:/NFC-FoodTech/.tmp-pruebas/panel/test/parametros_test.dart: guarda solo cambios y resume éxito y fallo sin exponer SQL
+00:15 +97: E:/NFC-FoodTech/.tmp-pruebas/panel/test/parametros_test.dart: guarda solo cambios y resume éxito y fallo sin exponer SQL
+00:15 +98: E:/NFC-FoodTech/.tmp-pruebas/panel/test/parametros_test.dart: guarda solo cambios y resume éxito y fallo sin exponer SQL
+00:15 +99: E:/NFC-FoodTech/.tmp-pruebas/panel/test/parametros_test.dart: guarda solo cambios y resume éxito y fallo sin exponer SQL
+00:16 +100: E:/NFC-FoodTech/.tmp-pruebas/panel/test/parametros_test.dart: guarda solo cambios y resume éxito y fallo sin exponer SQL
+00:16 +101: E:/NFC-FoodTech/.tmp-pruebas/panel/test/propuestos_widgets_test.dart: Lista banner seudónimo fecha y buscador, sin datos privados ni Marca
+00:16 +102: E:/NFC-FoodTech/.tmp-pruebas/panel/test/propuestos_widgets_test.dart: Lista banner seudónimo fecha y buscador, sin datos privados ni Marca
+00:16 +103: E:/NFC-FoodTech/.tmp-pruebas/panel/test/propuestos_widgets_test.dart: Lista banner seudónimo fecha y buscador, sin datos privados ni Marca
+00:16 +104: E:/NFC-FoodTech/.tmp-pruebas/panel/test/categorias_widgets_test.dart: Recarga de ruta con tab conserva destino durante validación de sesión
+00:16 +105: E:/NFC-FoodTech/.tmp-pruebas/panel/test/reportes_test.dart: genera dos tablas, privacidad y vacío
+00:17 +106: E:/NFC-FoodTech/.tmp-pruebas/panel/test/propuestos_widgets_test.dart: Aprobación reutiliza formulario precargado y envía campos corregidos
+00:17 +107: E:/NFC-FoodTech/.tmp-pruebas/panel/test/propuestos_widgets_test.dart: Aprobación reutiliza formulario precargado y envía campos corregidos
+00:17 +108: E:/NFC-FoodTech/.tmp-pruebas/panel/test/propuestos_widgets_test.dart: Rechazo requiere confirmación y recarga listado/badge
+00:18 +109: E:/NFC-FoodTech/.tmp-pruebas/panel/test/soporte_paginacion_test.dart: soporte conserva total al agotar una página exacta
+00:18 +110: E:/NFC-FoodTech/.tmp-pruebas/panel/test/soporte_paginacion_test.dart: soporte conserva total al agotar una página exacta
+00:18 +111: E:/NFC-FoodTech/.tmp-pruebas/panel/test/soporte_paginacion_test.dart: soporte conserva total al agotar una página exacta
+00:18 +112: E:/NFC-FoodTech/.tmp-pruebas/panel/test/soporte_paginacion_test.dart: soporte conserva total al agotar una página exacta
+00:18 +113: E:/NFC-FoodTech/.tmp-pruebas/panel/test/soporte_paginacion_test.dart: soporte conserva total al agotar una página exacta
+00:19 +114: E:/NFC-FoodTech/.tmp-pruebas/panel/test/soporte_paginacion_test.dart: soporte conserva total al agotar una página exacta
+00:19 +115: E:/NFC-FoodTech/.tmp-pruebas/panel/test/soporte_test.dart: filtro y respuesta validada sin base real
+00:20 +116: E:/NFC-FoodTech/.tmp-pruebas/panel/test/soporte_test.dart: filtro y respuesta validada sin base real
+00:20 +117: E:/NFC-FoodTech/.tmp-pruebas/panel/test/soporte_test.dart: filtro y respuesta validada sin base real
+00:20 +118: E:/NFC-FoodTech/.tmp-pruebas/panel/test/usuarios_paginacion_test.dart: usuarios conserva total al agotar una página exacta
+00:21 +119: E:/NFC-FoodTech/.tmp-pruebas/panel/test/usuarios_paginacion_test.dart: usuarios conserva total al agotar una página exacta
+00:21 +120: E:/NFC-FoodTech/.tmp-pruebas/panel/test/usuarios_paginacion_test.dart: (tearDownAll)
+00:22 +120: All tests passed!

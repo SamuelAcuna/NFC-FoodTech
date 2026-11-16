@@ -1,0 +1,358 @@
+00:00 +0: loading E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/advertencia_stock_test.dart
+00:00 +0: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/avisos_locales_test.dart: anticipación y hora civil de Santiago para fecha estimada
+00:00 +1: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/avisos_locales_test.dart: anticipación y hora civil de Santiago para fecha estimada
+00:00 +2: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/avisos_locales_test.dart: anticipación y hora civil de Santiago para fecha estimada
+00:00 +3: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/avisos_locales_test.dart: anticipación y hora civil de Santiago para fecha estimada
+00:00 +4: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/avisos_locales_test.dart: anticipación y hora civil de Santiago para fecha estimada
+00:00 +5: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +6: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +7: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +8: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +9: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +10: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +11: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +12: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +13: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +14: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +15: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +16: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +17: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +18: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +19: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +20: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +21: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +22: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +23: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +24: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +25: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +26: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +27: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +28: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +29: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +30: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +31: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +32: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +33: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +34: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +35: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +36: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +37: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +38: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +39: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +40: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +41: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +42: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +43: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +44: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +45: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +46: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +47: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +48: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +49: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +50: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +51: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +52: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +53: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +54: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +55: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +56: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +57: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +58: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +59: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +60: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +61: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +62: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +63: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +64: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +65: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +66: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +67: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +68: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +69: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +70: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +71: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +72: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +73: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +74: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +75: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +76: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +77: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:00 +78: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:01 +79: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:01 +80: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:01 +81: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:01 +82: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:01 +83: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:01 +84: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:01 +85: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:01 +86: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:03 +87: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:03 +88: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:03 +89: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:03 +89: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/estimacion_compra_test.dart: fallo del historial permite seguir abriendo la confirmación
+No se pudo estimar el gasto de la lista: PostgrestException(message: Historial no disponible, code: 400, details: null, hint: null)
+00:04 +90: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +91: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +92: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +93: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +94: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +95: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +96: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +97: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +98: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +99: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +100: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +101: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +102: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +103: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +104: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: crear lista con teclado abierto, sin errores de controlador u overlays (claro)
+00:04 +105: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:04 +106: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:04 +107: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:04 +108: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:05 +109: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:05 +110: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:05 +111: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:05 +112: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:05 +113: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:05 +114: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:05 +115: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:06 +116: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:06 +117: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:07 +118: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:07 +119: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:07 +120: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:07 +121: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:07 +122: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (false)
+00:07 +123: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:07 +124: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:07 +125: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:08 +126: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +127: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:09 +128: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:09 +129: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:09 +130: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:09 +131: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:10 +131: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/advertencia_stock_test.dart: fallo de red informa sin fingir stock cero
+No se pudo comprobar el stock de compra: ClientException: Sin conexión
+00:10 +132: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:10 +133: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:10 +134: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:10 +135: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:10 +136: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:11 +137: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:11 +138: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:11 +139: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:11 +140: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:11 +141: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:11 +142: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +143: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +144: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +145: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +146: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +147: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +148: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +149: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +150: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +151: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +152: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +153: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +154: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +155: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +156: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +157: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +158: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +159: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +160: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +161: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +162: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +163: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +164: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +165: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +166: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +167: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +168: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +169: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +170: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +171: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +172: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +173: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +174: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +175: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +176: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +177: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:12 +178: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:13 +179: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:13 +180: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:13 +181: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:13 +182: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:13 +183: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:13 +184: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:13 +185: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/perdida_economica_test.dart: pantalla y archivo CSV: sin descartes, oscuro: false
+00:13 +186: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:13 +187: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:13 +188: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:13 +189: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:14 +190: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:14 +191: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:14 +192: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:14 +193: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:14 +194: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:14 +195: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:14 +196: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:14 +197: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:14 +198: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:15 +199: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:15 +200: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:15 +201: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:15 +202: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:15 +203: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:15 +204: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:15 +205: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:16 +206: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:16 +207: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: abrir, recargar y cerrar pantalla no ejecuta R66
+00:16 +208: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:16 +209: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:17 +210: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:17 +211: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:17 +212: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:17 +213: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/advertencia_stock_test.dart: agregado manual y confirmación consultan stock por separado
+00:17 +214: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/advertencia_stock_test.dart: agregado manual y confirmación consultan stock por separado
+00:17 +215: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/advertencia_stock_test.dart: agregado manual y confirmación consultan stock por separado
+00:18 +216: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +217: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +218: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +219: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +220: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +221: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +222: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +223: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +224: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +225: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +226: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +227: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +228: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +229: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +230: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +231: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +232: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +233: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +234: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +235: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +236: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +237: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +238: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +239: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +240: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +241: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +242: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con Atrás Android
+00:18 +243: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:19 +244: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:19 +245: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:19 +246: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:19 +247: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:19 +248: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:19 +249: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:19 +250: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:19 +251: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:19 +252: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:20 +253: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: varias listas muestran selector y cancelar conserva consumo
+00:20 +254: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:20 +255: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:21 +256: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:21 +257: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:21 +258: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:21 +259: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:21 +260: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:21 +261: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:21 +262: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (true)
+00:21 +263: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (true)
+00:22 +264: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (true)
+00:22 +265: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/sugerencias_compra_test.dart: Consultas y aceptación R69 cancelar no agrega ni vuelve a consultar
+00:22 +266: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: visita sin compras y confirmación cancelada no recargan inventario
+00:22 +267: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: visita sin compras y confirmación cancelada no recargan inventario
+00:22 +268: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: timeout de consumo no se reenvía aunque el servidor termine después
+00:23 +269: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: timeout de consumo no se reenvía aunque el servidor termine después
+00:23 +270: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: timeout de consumo no se reenvía aunque el servidor termine después
+00:23 +271: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: resumen usa datos reales, filtros temporales y cache entre pestañas
+00:24 +272: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: resumen usa datos reales, filtros temporales y cache entre pestañas
+00:24 +273: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: resumen usa datos reales, filtros temporales y cache entre pestañas
+00:24 +274: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: timeout de inserción conserva consumo y no vuelve a enviar
+00:24 +275: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: timeout de inserción conserva consumo y no vuelve a enviar
+00:24 +276: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: timeout de inserción conserva consumo y no vuelve a enviar
+00:25 +277: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: la recarga conserva búsqueda y filtros seleccionados
+00:25 +278: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: la recarga conserva búsqueda y filtros seleccionados
+00:25 +279: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: la recarga conserva búsqueda y filtros seleccionados
+00:25 +280: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: la recarga conserva búsqueda y filtros seleccionados
+00:26 +281: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: la recarga conserva búsqueda y filtros seleccionados
+00:26 +282: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/reposicion_automatica_test.dart: doble selección de lista incorpora una vez en el destino elegido
+00:26 +282: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: notificaciones recientes reales limitadas y filtradas por usuario
+M28: resultado de sincronización: {}
+00:26 +283: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: notificaciones recientes reales limitadas y filtradas por usuario
+00:26 +284: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: notificaciones recientes reales limitadas y filtradas por usuario
+00:26 +285: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: compras funciona desde otra pantalla sin callback de inventario
+00:27 +286: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/sugerencias_compra_test.dart: Consultas y aceptación R69 cantidad inválida conserva el diálogo sin enviar
+00:27 +287: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/sugerencias_compra_test.dart: Consultas y aceptación R69 cantidad inválida conserva el diálogo sin enviar
+00:27 +288: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: la recarga conserva la expansión de un alimento existente
+00:27 +289: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: la recarga conserva la expansión de un alimento existente
+00:28 +290: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/flujos_compras_test.dart: la recarga conserva la expansión de un alimento existente
+00:28 +291: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: pestanas conservan filtros y Atras Android distingue subruta y raiz
+00:29 +292: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: pestanas conservan filtros y Atras Android distingue subruta y raiz
+00:29 +293: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: pestanas conservan filtros y Atras Android distingue subruta y raiz
+00:29 +294: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: pestanas conservan filtros y Atras Android distingue subruta y raiz
+00:30 +295: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/sugerencias_compra_test.dart: Consultas y aceptación R69 rechazo explícito del servidor muestra el error
+00:30 +296: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: registro rapido reutiliza seleccion manual y actualiza contador
+00:31 +297: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: registro rapido reutiliza seleccion manual y actualiza contador
+M19: alimentos registrados: 1
+00:32 +298: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: seleccionar pestaña mientras carga el hogar no deja una pantalla vacía
+00:32 +299: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: toque de aviso abre alertas solo con sesión y hogar vigentes
+00:33 +300: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: toque de aviso no abre contexto antiguo: otra cuenta
+00:34 +301: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: toque de aviso no abre contexto antiguo: expulsado
+00:34 +302: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: toque de aviso no abre contexto antiguo: otro hogar
+00:35 +303: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: toque de aviso no abre contexto antiguo: sin conexión
+00:35 +304: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: accesos reales del Home conservan hogar y Atrás (false)
+00:36 +305: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: accesos reales del Home conservan hogar y Atrás (true)
+00:38 +306: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: indicadores abiertos desde Inventario vuelven a Inventario con su flecha
+00:39 +307: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Análisis respeta expulsión y cierre de rutas protegidas
+00:39 +308: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: sin hogar mantiene cinco pestanas y bloquea registro
+00:40 +309: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: resumen distingue cero real y alimentos distintos disponibles
+00:40 +310: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: resumen pagina y no informa totales truncados
+00:41 +311: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: error del resumen permite reintento sin confundirse con cero o sin hogar
+00:41 +312: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: resumen descarta datos pendientes tras cambio de cuenta
+00:42 +313: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: resumen se actualiza al volver de Inventario sin consulta extra al entrar
+00:42 +314: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: ayuda describe consumo implementado y acceso desde Inventario
+00:42 +315: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: sin hogar ofrece gestion desde Inicio y bloquea registro (claro)
+00:43 +316: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: un hogar se carga sin selección y conserva mapa de inventario (claro)
+00:43 +317: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: error de consulta no se interpreta como ausencia y permite reintento (claro)
+00:43 +318: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Mi hogar conserva gestión y oculta creación y selección (claro)
+00:44 +319: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: sin hogar ofrece gestion desde Inicio y bloquea registro (oscuro)
+00:44 +320: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: un hogar se carga sin selección y conserva mapa de inventario (oscuro)
+00:45 +321: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: error de consulta no se interpreta como ausencia y permite reintento (oscuro)
+00:45 +322: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Mi hogar conserva gestión y oculta creación y selección (oscuro)
+00:45 +323: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: catálogo recibe el mapa completo del único hogar
+00:46 +324: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Recarga tras crear (gestión: false)
+00:46 +325: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Recarga tras unirse (gestión: false)
+M17: incorporación al hogar completada.
+00:47 +326: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Recarga tras crear (gestión: true)
+00:47 +327: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: Recarga tras unirse (gestión: true)
+M17: incorporación al hogar completada.
+00:48 +328: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: abandono actualiza Mi hogar y limpia el hogar del Home al volver
+00:49 +329: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: transferencia refresca los permisos visibles de Mi hogar
+00:50 +330: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: verifica nuevamente antes de abrir un hogar que dejó de pertenecer
+00:51 +331: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: error de red al entrar a pestana bloquea y permite reintentar
+00:51 +332: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: rechaza hogares múltiples sin elegir el primero (gestión: false)
+00:52 +333: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: respuesta anterior no restaura un hogar tras recarga (gestión: false)
+00:52 +334: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: rechaza hogares múltiples sin elegir el primero (gestión: true)
+00:52 +335: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: respuesta anterior no restaura un hogar tras recarga (gestión: true)
+00:53 +336: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cambio de cuenta invalida una consulta pendiente
+00:54 +337: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: sesión activa mantiene Inventario y navegación secundaria (false)
+00:54 +338: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: expulsión con Inventario abierto regresa al Home al reanudar (false)
+00:55 +339: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: sesión activa mantiene Inventario y navegación secundaria (true)
+00:56 +340: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: expulsión con Inventario abierto regresa al Home al reanudar (true)
+00:57 +341: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: expulsión en primer plano se detecta al abrir una subpantalla
+00:57 +342: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: expulsión cierra subpantalla y diálogo sin enviar escrituras
+00:58 +343: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: red caída bloquea el flujo sin expulsar y reintento recupera acceso
+00:59 +344: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: confirmar tras expulsión comprueba membresía y no crea la lista
+01:00 +345: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: cambio de cuenta durante validación no restaura el flujo anterior
+01:01 +346: E:/NFC-FoodTech/.tmp-pruebas/app_sin_scanner/test/hogar_unico_test.dart: reanudar y navegar comparten la misma consulta de acceso
+01:02 +347: All tests passed!

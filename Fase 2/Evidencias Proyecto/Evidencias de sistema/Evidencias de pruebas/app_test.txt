@@ -1,0 +1,99 @@
+Resolving dependencies...
+Downloading packages...
+  app_links 7.2.1 (7.2.2 available)
+  app_links_linux 1.0.3 (1.0.5 available)
+  app_links_web 1.0.4 (1.0.5 available)
+  code_assets 2.1.0 (2.2.0 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+  crypto 3.0.7 (3.0.8 available)
+  flutter_local_notifications 22.0.0 (23.0.1 available)
+  flutter_local_notifications_linux 8.0.2 (9.0.0 available)
+  flutter_local_notifications_platform_interface 12.2.0 (13.0.0 available)
+  flutter_local_notifications_web 1.0.0 (2.0.0 available)
+  flutter_local_notifications_windows 3.1.1 (4.0.1 available)
+  gotrue 2.27.2 (2.27.3 available)
+  image_picker_ios 0.8.13+13 (0.8.13+15 available)
+  jni 1.1.1 (1.1.2 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  mobile_scanner 7.4.2 (7.5.0 available)
+  objective_c 9.6.2 (9.6.4 available)
+  passkeys_platform_interface 2.10.0 (2.11.0 available)
+  realtime_client 2.13.0 (2.13.2 available)
+  shared_preferences_android 2.4.28 (2.5.5 available)
+  shared_preferences_foundation 2.5.7 (2.6.2 available)
+  supabase 2.16.2 (2.16.5 available)
+  supabase_flutter 2.18.0 (2.18.3 available)
+  test_api 0.7.12 (0.7.15 available)
+  url_launcher 6.3.2 (6.3.3 available)
+  vector_math 2.4.3 (2.4.4 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+28 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart
+00:00 +0: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: anticipación y hora civil de Santiago para fecha estimada
+00:00 +1: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: fecha manual conserva nombre y no se trata como timestamp UTC
+00:00 +2: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: vence mañana con anticipacion de un dia programa hoy si la hora es futura
+00:00 +3: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: fecha superada usa siguiente hora preferida y no programa próxima
+00:00 +4: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: si la hora de hoy no pasó se conserva para aviso atrasado
+00:00 +5: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: hora próxima pasada no produce aviso próximo después de caducar
+00:00 +6: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: preferencias deshabilitadas y silencio no programan
+00:00 +7: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: agotados, descartados, otro hogar y fechas inválidas quedan fuera
+00:00 +8: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: cambio de fecha actualiza huella sin cambiar identidad
+00:00 +9: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: usuarios y hogares diferentes no comparten identidad
+00:00 +10: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: repetición de ingresos no duplica avisos ni expone datos privados
+00:00 +11: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: medianoche UTC no adelanta el día civil de Santiago
+00:00 +12: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: hora inexistente en salto estacional se normaliza hacia adelante
+00:00 +13: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: Santiago aplica verano e invierno mediante IANA
+00:00 +14: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: cruce estacional conserva día y hora civil con jornadas de 23 y 25 horas
+00:00 +15: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos diagnostico separa agenda persistida de pendientes y no expone contexto
+00:00 +16: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos registro persistido sin programacion exitosa puede reintentarse aun pasada la fecha
+00:00 +17: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos sincronización repetida y reinicio del servicio conservan identificadores
+00:00 +18: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos cambio de fecha cancela y reemplaza con los mismos identificadores
+00:00 +19: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos consumo total, descarte y deshabilitación cancelan solo avisos propios
+00:00 +20: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos silencio local cancela incluso si la siguiente lectura de inventario falla
+00:00 +21: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos error de red conserva agenda y permite recuperar sincronización
+00:00 +22: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos fallo de inventario tras verificar membresía conserva alarmas
+00:00 +23: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos sin permiso no se programa y concederlo permite reconciliar
+00:00 +24: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos expulsión confirmada cancela y cambio de hogar no conserva agenda anterior
+00:00 +25: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos cierre de sesión y nuevo usuario no reutilizan identificadores
+00:00 +26: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos consulta antigua no programa después de un cambio de cuenta
+00:00 +27: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos peticiones simultáneas se agrupan y no duplican avisos
+00:00 +28: E:/NFC-FoodTech/.tmp-pruebas/app/test/avisos_locales_test.dart: reconciliación sin canales nativos aviso pasado no se reproduce cada día al sincronizar
+00:00 +29: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: correo sin hogar revisa y simula sin UUID objetivo ni cierre de sesión
+00:00 +30: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: Google reutiliza estado y verificación TOTP sin exigir contraseña
+00:00 +31: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: MEMBRESIA_ACTIVA se muestra y no habilita simulación
+00:00 +32: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: CREADOR_HOGAR se muestra y no habilita simulación
+00:00 +33: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: CREADOR_SIN_RELEVO se muestra y no habilita simulación
+00:00 +34: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: CUENTA_NO_ACTIVA se muestra y no habilita simulación
+00:00 +35: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: REFERENCIA_BLOQUEANTE se muestra y no habilita simulación
+00:00 +36: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: membresía histórica informada no equivale a activa
+00:00 +37: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: error de servidor no se interpreta como ausencia de dependencias
+00:00 +38: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: timeout guarda recibo, bloquea reenvío y consulta mismo identificador
+00:00 +39: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: doble pulsación comparte protección de procesamiento y envía una solicitud
+00:00 +40: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: cambio de usuario durante confirmación descarta respuesta y conserva nueva sesión
+00:00 +41: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: cambio de usuario durante revisión no publica datos viejos
+00:00 +42: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: contrato que habilita borrado real se rechaza sin tratarlo como éxito
+00:00 +43: E:/NFC-FoodTech/.tmp-pruebas/app/test/m08_eliminacion_local_test.dart: recibo sobrevive a recreación del controlador y no se duplica tras reiniciar
+00:02 +44: E:/NFC-FoodTech/.tmp-pruebas/app/test/notificaciones_android_test.dart: inicializa icono y canal; no acepta inicializacion falsa
+00:02 +45: E:/NFC-FoodTech/.tmp-pruebas/app/test/notificaciones_android_test.dart: publicacion inmediata y programada comparten canal e icono
+00:02 +46: E:/NFC-FoodTech/.tmp-pruebas/app/test/notificaciones_android_test.dart: el plan real alcanza zonedSchedule con su fecha futura Santiago
+00:02 +47: E:/NFC-FoodTech/.tmp-pruebas/app/test/notificaciones_android_test.dart: errores nativos de programacion se propagan; no hay exito falso
+00:02 +48: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: tres meses cruzan año y reutilizan pérdida proporcional sin incluir consumo
+00:02 +49: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: precios desconocidos, parciales, cero y ausencia de descartes se distinguen
+00:02 +50: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: consumo sin descarte distingue cero de ausencia de movimientos
+00:02 +51: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: promedia por ingreso y descarta salidas sin datos válidos
+00:02 +52: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: dos indicadores adaptables sin gráficos (false, 320.0)
+00:02 +53: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: dos indicadores adaptables sin gráficos (false, 320.0)
+00:02 +54: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: dos indicadores adaptables sin gráficos (false, 320.0)
+00:02 +55: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: dos indicadores adaptables sin gráficos (false, 320.0)
+00:02 +56: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: dos indicadores adaptables sin gráficos (false, 600.0)
+00:03 +57: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: dos indicadores adaptables sin gráficos (true, 320.0)
+00:03 +58: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: dos indicadores adaptables sin gráficos (true, 600.0)
+00:03 +59: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: cero real sin descartes conserva la explicación y no inventa porcentaje
+00:03 +60: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: muestra cero por ciento cuando solo hubo consumo
+00:03 +61: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: sin precios no se muestra cero y con precio cero se conserva valor conocido
+00:03 +62: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: carga y ausencia de hogar no presentan importes ni porcentajes
+00:03 +63: E:/NFC-FoodTech/.tmp-pruebas/app/test/resumen_hogar_test.dart: error oculta cifras anteriores y permite reintentar
+00:03 +64: All tests passed!
