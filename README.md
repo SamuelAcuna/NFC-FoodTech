@@ -26,7 +26,7 @@ Reducir el desperdicio de alimentos en los hogares, promoviendo un consumo más 
 - Autenticación y gestión de cuentas.
 - Creación y administración de hogares.
 - Incorporación de integrantes y gestión de roles.
-- Acceso a múltiples hogares.
+- Hogar compartido con invitación por código.
 
 **Inventario de alimentos**
 - Registro y administración de alimentos.
@@ -85,7 +85,7 @@ Esta organización permite compartir información entre los componentes, separar
 El repositorio está organizado de acuerdo con las fases académicas del proyecto.
 
 ```text
-NFC-FoodTech-app/
+NFC-FoodTech/
 │
 ├── Fase 1/
 │   ├── Evidencias Grupales/
@@ -95,10 +95,13 @@ NFC-FoodTech-app/
 │   ├── Evidencias Grupales/
 │   ├── Evidencias Individuales/
 │   └── Evidencias Proyecto/
-│       ├── Documentación del proyecto
+│       ├── Evidencias de documentacion/
+│       │   └── Diagramas/
 │       └── Evidencias de sistema/
 │           ├── Aplicacion/
-│           └── PanelAdministracion/
+│           ├── PanelAdministracion/
+│           ├── Evidencias de base de datos/
+│           └── Evidencias de pruebas/
 │
 └── README.md
 ```

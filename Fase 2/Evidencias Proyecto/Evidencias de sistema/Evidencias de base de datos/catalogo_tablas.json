@@ -1,0 +1,3352 @@
+{
+  "proyecto": "dpsbrniclxojsoxhgmjv",
+  "capturado": "2026-11-13T22:05:10.123402+00:00",
+  "origen": "pg_catalog; sin filas de tablas de negocio",
+  "tablas": [
+    {
+      "rls": true,
+      "nombre": "aceptacion_documentos",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "aceptacion_documentos_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX aceptacion_documentos_pkey ON public.aceptacion_documentos USING btree (usuario_id, terminos_version, privacidad_version)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "usuario_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "terminos_version",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "privacidad_version",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "aceptado_en",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "p",
+          "nombre": "aceptacion_documentos_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (usuario_id, terminos_version, privacidad_version)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "aceptacion_documentos_usuario_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (usuario_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "c",
+          "nombre": "aceptacion_documentos_version_check",
+          "comentario": null,
+          "definicion": "CHECK (terminos_version = 'BORRADOR-R81-1'::text AND privacidad_version = 'BORRADOR-R81-1'::text)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "alimento",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "alimento_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX alimento_pkey ON public.alimento USING btree (id)"
+        },
+        {
+          "nombre": "ix_alimento_categoria",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_alimento_categoria ON public.alimento USING btree (categoria_id)"
+        },
+        {
+          "nombre": "ux_alimento_nombre_global",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE UNIQUE INDEX ux_alimento_nombre_global ON public.alimento USING btree (lower(nombre)) WHERE (hogar_id IS NULL)"
+        },
+        {
+          "nombre": "ux_alimento_nombre_hogar",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE UNIQUE INDEX ux_alimento_nombre_hogar ON public.alimento USING btree (hogar_id, lower(nombre)) WHERE (hogar_id IS NOT NULL)"
+        },
+        {
+          "nombre": "ix_alimento_hogar",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_alimento_hogar ON public.alimento USING btree (hogar_id) WHERE (hogar_id IS NOT NULL)"
+        },
+        {
+          "nombre": "admin_alimento_catalogo_ix",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX admin_alimento_catalogo_ix ON public.alimento USING btree (categoria_id, activo) WHERE (hogar_id IS NULL)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "id",
+          "default": null,
+          "identity": "d",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "nombre",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "categoria_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "integer",
+          "nombre": "vida_util_dias_ref",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "unidad_base",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "es_perecible",
+          "default": "true",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "estado",
+          "default": "'APROBADO'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "hogar_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "imagen_url",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "bigint",
+          "nombre": "canonico_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "creado_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "created_at",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "updated_at",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "activo",
+          "default": "true",
+          "identity": "",
+          "generated": "",
+          "comentario": "Baja lógica del catálogo maestro (RF84). La app no debe ofrecer alimentos inactivos al agregar."
+        },
+        {
+          "nulo": true,
+          "tipo": "integer",
+          "nombre": "vida_util_congelado_dias",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "admin_auditoria_alimento",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER admin_auditoria_alimento AFTER INSERT OR DELETE OR UPDATE ON alimento FOR EACH ROW EXECUTE FUNCTION admin_auditar('id')",
+          "habilitado": "O"
+        },
+        {
+          "nombre": "trg_alimento_updated_at",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER trg_alimento_updated_at BEFORE UPDATE ON alimento FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "f",
+          "nombre": "alimento_canonico_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (canonico_id) REFERENCES alimento(id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "alimento_categoria_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (categoria_id) REFERENCES categoria(id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "alimento_creado_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (creado_por) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "c",
+          "nombre": "alimento_estado_check",
+          "comentario": null,
+          "definicion": "CHECK (estado = ANY (ARRAY['LOCAL'::text, 'PROPUESTO'::text, 'APROBADO'::text, 'RECHAZADO'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "alimento_hogar_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (hogar_id) REFERENCES hogar(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "p",
+          "nombre": "alimento_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "alimento_unidad_base_check",
+          "comentario": null,
+          "definicion": "CHECK (unidad_base = ANY (ARRAY['g'::text, 'ml'::text, 'un'::text]))"
+        },
+        {
+          "tipo": "c",
+          "nombre": "alimento_vida_util_dias_ref_check",
+          "comentario": null,
+          "definicion": "CHECK (vida_util_dias_ref > 0)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "ck_alimento_ambito",
+          "comentario": null,
+          "definicion": "CHECK ((estado = 'APROBADO'::text) = (hogar_id IS NULL))"
+        },
+        {
+          "tipo": "c",
+          "nombre": "ck_alimento_canonico_distinto",
+          "comentario": null,
+          "definicion": "CHECK (canonico_id IS NULL OR canonico_id <> id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "auditoria",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "auditoria_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX auditoria_pkey ON public.auditoria USING btree (id)"
+        },
+        {
+          "nombre": "ix_audit_entidad",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_audit_entidad ON public.auditoria USING btree (entidad, entidad_id, fecha DESC)"
+        },
+        {
+          "nombre": "ix_audit_perfil",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_audit_perfil ON public.auditoria USING btree (perfil_id)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "entidad",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "entidad_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "accion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "perfil_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "jsonb",
+          "nombre": "antes",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "jsonb",
+          "nombre": "despues",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "fecha",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "motivo",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "auditoria_accion_check",
+          "comentario": null,
+          "definicion": "CHECK (accion = ANY (ARRAY['INSERT'::text, 'UPDATE'::text, 'DELETE'::text, 'APROBAR'::text, 'RECHAZAR'::text, 'SUSPENDER'::text, 'REACTIVAR'::text, 'CUENTA_DESACTIVADA'::text, 'CUENTA_REACTIVADA'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "auditoria_perfil_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (perfil_id) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "p",
+          "nombre": "auditoria_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "categoria",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "categoria_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX categoria_pkey ON public.categoria USING btree (id)"
+        },
+        {
+          "nombre": "ix_categoria_parent",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_categoria_parent ON public.categoria USING btree (parent_id)"
+        },
+        {
+          "nombre": "admin_categoria_nombre_uq",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE UNIQUE INDEX admin_categoria_nombre_uq ON public.categoria USING btree (COALESCE(parent_id, (0)::bigint), lower(btrim(nombre)))"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "id",
+          "default": null,
+          "identity": "d",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "nombre",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "bigint",
+          "nombre": "parent_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "integer",
+          "nombre": "vida_util_dias_ref",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": "Duración referencial en días en DESPENSA; solo para recordatorios, no es vencimiento exacto."
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "temp_conservacion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "integer",
+          "nombre": "vida_util_refrigerado_dias",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": "Duración referencial en días en REFRIGERADOR; null indica sin definir."
+        },
+        {
+          "nulo": true,
+          "tipo": "integer",
+          "nombre": "vida_util_congelado_dias",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": "Duración referencial en días en CONGELADOR; null indica sin definir."
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "activa",
+          "default": "true",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "admin_auditoria_categoria",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER admin_auditoria_categoria AFTER INSERT OR DELETE OR UPDATE ON categoria FOR EACH ROW EXECUTE FUNCTION admin_auditar('id')",
+          "habilitado": "O"
+        },
+        {
+          "nombre": "admin_categoria_validar_arbol",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER admin_categoria_validar_arbol BEFORE INSERT OR UPDATE OF parent_id ON categoria FOR EACH ROW EXECUTE FUNCTION admin_categoria_validar_arbol()",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "admin_categoria_despensa_dias_check",
+          "comentario": null,
+          "definicion": "CHECK (vida_util_dias_ref >= 1 AND vida_util_dias_ref <= 3650)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "categoria_parent_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (parent_id) REFERENCES categoria(id)"
+        },
+        {
+          "tipo": "p",
+          "nombre": "categoria_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "categoria_temp_conservacion_check",
+          "comentario": null,
+          "definicion": "CHECK (temp_conservacion = ANY (ARRAY['AMBIENTE'::text, 'REFRIGERADO'::text, 'CONGELADO'::text]))"
+        },
+        {
+          "tipo": "c",
+          "nombre": "categoria_vida_util_congelado_dias_check",
+          "comentario": null,
+          "definicion": "CHECK (vida_util_congelado_dias >= 1 AND vida_util_congelado_dias <= 3650)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "categoria_vida_util_dias_ref_check",
+          "comentario": null,
+          "definicion": "CHECK (vida_util_dias_ref > 0)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "categoria_vida_util_refrigerado_dias_check",
+          "comentario": null,
+          "definicion": "CHECK (vida_util_refrigerado_dias >= 1 AND vida_util_refrigerado_dias <= 3650)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "comuna",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "comuna_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX comuna_pkey ON public.comuna USING btree (id)"
+        },
+        {
+          "nombre": "comuna_region_nombre_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX comuna_region_nombre_key ON public.comuna USING btree (region_id, nombre)"
+        },
+        {
+          "nombre": "ix_comuna_region",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_comuna_region ON public.comuna USING btree (region_id)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "integer",
+          "nombre": "id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "nombre",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "smallint",
+          "nombre": "region_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "p",
+          "nombre": "comuna_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "comuna_region_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (region_id) REFERENCES region(id)"
+        },
+        {
+          "tipo": "u",
+          "nombre": "comuna_region_nombre_key",
+          "comentario": null,
+          "definicion": "UNIQUE (region_id, nombre)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "despensa_item",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "despensa_item_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX despensa_item_pkey ON public.despensa_item USING btree (id)"
+        },
+        {
+          "nombre": "ix_ditem_hogar_estado",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_ditem_hogar_estado ON public.despensa_item USING btree (hogar_id, estado)"
+        },
+        {
+          "nombre": "ix_ditem_vencimiento",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_ditem_vencimiento ON public.despensa_item USING btree (fecha_vencimiento) WHERE (estado = 'DISPONIBLE'::text)"
+        },
+        {
+          "nombre": "ix_ditem_alimento",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_ditem_alimento ON public.despensa_item USING btree (alimento_id)"
+        },
+        {
+          "nombre": "ix_ditem_lote",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_ditem_lote ON public.despensa_item USING btree (lote_id)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "hogar_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "alimento_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "numeric(10,3)",
+          "nombre": "cantidad_inicial",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "numeric(10,3)",
+          "nombre": "cantidad_restante",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "date",
+          "nombre": "fecha_ingreso",
+          "default": "CURRENT_DATE",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "date",
+          "nombre": "fecha_vencimiento",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "vencimiento_estimado",
+          "default": "false",
+          "identity": "",
+          "generated": "",
+          "comentario": "true = fecha calculada por vida util referencial; false = leida del envase."
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "lote_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "ubicacion",
+          "default": "'DESPENSA'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "estado",
+          "default": "'DISPONIBLE'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "created_at",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "integer",
+          "nombre": "precio_clp",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": "Precio pagado por ESTE item en CLP. En packs se prorratea entre los items."
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "observaciones",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "date",
+          "nombre": "fecha_inicio_congelacion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "date",
+          "nombre": "fecha_previa_congelacion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "trg_despensa_ingreso",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER trg_despensa_ingreso AFTER INSERT ON despensa_item FOR EACH ROW EXECUTE FUNCTION registrar_ingreso_movimiento()",
+          "habilitado": "O"
+        },
+        {
+          "nombre": "trg_m19_autocalcular_vencimiento",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER trg_m19_autocalcular_vencimiento BEFORE INSERT ON despensa_item FOR EACH ROW EXECUTE FUNCTION m19_autocalcular_vencimiento()",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "ck_ditem_cantidades",
+          "comentario": null,
+          "definicion": "CHECK (cantidad_restante >= 0::numeric AND cantidad_restante <= cantidad_inicial)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "despensa_item_alimento_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (alimento_id) REFERENCES alimento(id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "despensa_item_cantidad_inicial_check",
+          "comentario": null,
+          "definicion": "CHECK (cantidad_inicial > 0::numeric)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "despensa_item_estado_check",
+          "comentario": null,
+          "definicion": "CHECK (estado = ANY (ARRAY['DISPONIBLE'::text, 'AGOTADO'::text, 'DESECHADO'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "despensa_item_hogar_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (hogar_id) REFERENCES hogar(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "p",
+          "nombre": "despensa_item_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "despensa_item_precio_clp_check",
+          "comentario": null,
+          "definicion": "CHECK (precio_clp >= 0)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "despensa_item_ubicacion_check",
+          "comentario": null,
+          "definicion": "CHECK (ubicacion = ANY (ARRAY['DESPENSA'::text, 'REFRIGERADOR'::text, 'CONGELADOR'::text]))"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "hogar",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "hogar_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX hogar_pkey ON public.hogar USING btree (id)"
+        },
+        {
+          "nombre": "ix_hogar_creado_por",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_hogar_creado_por ON public.hogar USING btree (creado_por)"
+        },
+        {
+          "nombre": "ix_hogar_comuna",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_hogar_comuna ON public.hogar USING btree (comuna_id)"
+        },
+        {
+          "nombre": "ux_hogar_codigo_invitacion",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE UNIQUE INDEX ux_hogar_codigo_invitacion ON public.hogar USING btree (codigo_invitacion) WHERE (codigo_invitacion IS NOT NULL)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "nombre",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "smallint",
+          "nombre": "adultos",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "smallint",
+          "nombre": "menores",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "creado_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "created_at",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "updated_at",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "integer",
+          "nombre": "comuna_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "sector",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "codigo_invitacion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "timestamp with time zone",
+          "nombre": "codigo_invitacion_expira_en",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "trg_hogar_creador_admin",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER trg_hogar_creador_admin AFTER INSERT ON hogar FOR EACH ROW EXECUTE FUNCTION agregar_creador_como_admin()",
+          "habilitado": "O"
+        },
+        {
+          "nombre": "trg_hogar_updated_at",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER trg_hogar_updated_at BEFORE UPDATE ON hogar FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "hogar_adultos_check",
+          "comentario": null,
+          "definicion": "CHECK (adultos >= 0)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "hogar_comuna_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (comuna_id) REFERENCES comuna(id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "hogar_creado_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (creado_por) REFERENCES perfil(id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "hogar_menores_check",
+          "comentario": null,
+          "definicion": "CHECK (menores >= 0)"
+        },
+        {
+          "tipo": "p",
+          "nombre": "hogar_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "hogar_miembro",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "hogar_miembro_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX hogar_miembro_pkey ON public.hogar_miembro USING btree (hogar_id, perfil_id)"
+        },
+        {
+          "nombre": "ix_hmiembro_perfil",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_hmiembro_perfil ON public.hogar_miembro USING btree (perfil_id)"
+        },
+        {
+          "nombre": "ix_hmiembro_invitado_por",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_hmiembro_invitado_por ON public.hogar_miembro USING btree (invitado_por)"
+        },
+        {
+          "nombre": "uq_hogar_miembro_perfil_activo",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE UNIQUE INDEX uq_hogar_miembro_perfil_activo ON public.hogar_miembro USING btree (perfil_id) WHERE (estado = 'ACTIVO'::text)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "hogar_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "perfil_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "rol",
+          "default": "'MIEMBRO'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "estado",
+          "default": "'INVITADO'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "invitado_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "timestamp with time zone",
+          "nombre": "joined_at",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "hogar_miembro_estado_check",
+          "comentario": null,
+          "definicion": "CHECK (estado = ANY (ARRAY['ACTIVO'::text, 'INVITADO'::text, 'REMOVIDO'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "hogar_miembro_hogar_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (hogar_id) REFERENCES hogar(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "f",
+          "nombre": "hogar_miembro_invitado_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (invitado_por) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "f",
+          "nombre": "hogar_miembro_perfil_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (perfil_id) REFERENCES perfil(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "p",
+          "nombre": "hogar_miembro_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (hogar_id, perfil_id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "hogar_miembro_rol_check",
+          "comentario": null,
+          "definicion": "CHECK (rol = ANY (ARRAY['ADMIN'::text, 'MIEMBRO'::text]))"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "lista_compra",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "lista_compra_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX lista_compra_pkey ON public.lista_compra USING btree (id)"
+        },
+        {
+          "nombre": "ix_lista_hogar",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_lista_hogar ON public.lista_compra USING btree (hogar_id)"
+        },
+        {
+          "nombre": "ix_lista_creada_por",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_lista_creada_por ON public.lista_compra USING btree (creada_por)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "hogar_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "nombre",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "estado",
+          "default": "'ABIERTA'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "creada_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "creada_en",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "timestamp with time zone",
+          "nombre": "cerrada_en",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "f",
+          "nombre": "lista_compra_creada_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (creada_por) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "c",
+          "nombre": "lista_compra_estado_check",
+          "comentario": null,
+          "definicion": "CHECK (estado = ANY (ARRAY['ABIERTA'::text, 'CERRADA'::text, 'ARCHIVADA'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "lista_compra_hogar_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (hogar_id) REFERENCES hogar(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "p",
+          "nombre": "lista_compra_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "lista_compra_item",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "lista_compra_item_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX lista_compra_item_pkey ON public.lista_compra_item USING btree (id)"
+        },
+        {
+          "nombre": "ix_litem_lista",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_litem_lista ON public.lista_compra_item USING btree (lista_id)"
+        },
+        {
+          "nombre": "ix_litem_alimento",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_litem_alimento ON public.lista_compra_item USING btree (alimento_id)"
+        },
+        {
+          "nombre": "ix_litem_ditem",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_litem_ditem ON public.lista_compra_item USING btree (despensa_item_id)"
+        },
+        {
+          "nombre": "ix_litem_agregado_por",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_litem_agregado_por ON public.lista_compra_item USING btree (agregado_por)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "lista_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "alimento_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "numeric(10,3)",
+          "nombre": "cantidad",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "unidad",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "origen",
+          "default": "'MANUAL'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "estado",
+          "default": "'PENDIENTE'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "despensa_item_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "agregado_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "timestamp with time zone",
+          "nombre": "fecha_compra",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "integer",
+          "nombre": "precio_compra_clp",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "trg_registrar_fecha_precio_compra",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER trg_registrar_fecha_precio_compra BEFORE UPDATE ON lista_compra_item FOR EACH ROW EXECUTE FUNCTION registrar_fecha_precio_compra()",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "f",
+          "nombre": "lista_compra_item_agregado_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (agregado_por) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "f",
+          "nombre": "lista_compra_item_alimento_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (alimento_id) REFERENCES alimento(id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "lista_compra_item_cantidad_check",
+          "comentario": null,
+          "definicion": "CHECK (cantidad > 0::numeric)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "lista_compra_item_despensa_item_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (despensa_item_id) REFERENCES despensa_item(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "c",
+          "nombre": "lista_compra_item_estado_check",
+          "comentario": null,
+          "definicion": "CHECK (estado = ANY (ARRAY['PENDIENTE'::text, 'COMPRADO'::text, 'DESCARTADO'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "lista_compra_item_lista_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (lista_id) REFERENCES lista_compra(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "c",
+          "nombre": "lista_compra_item_origen_check",
+          "comentario": null,
+          "definicion": "CHECK (origen = ANY (ARRAY['MANUAL'::text, 'SUGERIDO_CONSUMO'::text, 'SUGERIDO_VENCIDO'::text]))"
+        },
+        {
+          "tipo": "p",
+          "nombre": "lista_compra_item_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "lista_compra_item_precio_compra_no_negativo",
+          "comentario": null,
+          "definicion": "CHECK (precio_compra_clp IS NULL OR precio_compra_clp >= 0)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "lista_compra_item_unidad_check",
+          "comentario": null,
+          "definicion": "CHECK (unidad = ANY (ARRAY['g'::text, 'kg'::text, 'ml'::text, 'l'::text, 'un'::text]))"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "m08_confirmacion_eliminacion",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "m08_confirmacion_eliminacion_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX m08_confirmacion_eliminacion_pkey ON public.m08_confirmacion_eliminacion USING btree (id)"
+        },
+        {
+          "nombre": "idx_m08_confirmacion_usuario",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX idx_m08_confirmacion_usuario ON public.m08_confirmacion_eliminacion USING btree (usuario_id)"
+        },
+        {
+          "nombre": "idx_m08_confirmacion_sesion_estado",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX idx_m08_confirmacion_sesion_estado ON public.m08_confirmacion_eliminacion USING btree (sesion_id, estado)"
+        },
+        {
+          "nombre": "idx_m08_una_solicitud_pendiente",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE UNIQUE INDEX idx_m08_una_solicitud_pendiente ON public.m08_confirmacion_eliminacion USING btree (usuario_id) WHERE (estado = 'PENDIENTE'::text)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "usuario_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "sesion_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "estado",
+          "default": "'PENDIENTE'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "creada_en",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "vence_en",
+          "default": "(now() + '00:05:00'::interval)",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "timestamp with time zone",
+          "nombre": "confirmada_en",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "timestamp with time zone",
+          "nombre": "consumida_en",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "m08_confirmacion_eliminacion_estado_check",
+          "comentario": null,
+          "definicion": "CHECK (estado = ANY (ARRAY['PENDIENTE'::text, 'CONFIRMADA'::text, 'CONSUMIDA'::text, 'CANCELADA'::text]))"
+        },
+        {
+          "tipo": "p",
+          "nombre": "m08_confirmacion_eliminacion_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "m08_confirmacion_eliminacion_usuario_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (usuario_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "c",
+          "nombre": "m08_fecha_limite_valida",
+          "comentario": null,
+          "definicion": "CHECK (vence_en > creada_en)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "movimiento",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "movimiento_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX movimiento_pkey ON public.movimiento USING btree (id)"
+        },
+        {
+          "nombre": "ix_mov_item_fecha",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_mov_item_fecha ON public.movimiento USING btree (despensa_item_id, fecha)"
+        },
+        {
+          "nombre": "ix_mov_desperdicio",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_mov_desperdicio ON public.movimiento USING btree (tipo_desperdicio_id)"
+        },
+        {
+          "nombre": "ix_mov_registrado_por",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_mov_registrado_por ON public.movimiento USING btree (registrado_por)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "despensa_item_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "tipo",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "numeric(10,3)",
+          "nombre": "cantidad",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "bigint",
+          "nombre": "tipo_desperdicio_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "registrado_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "fecha",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "numeric(10,3)",
+          "nombre": "ajuste_delta",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "ck_mov_desperdicio",
+          "comentario": null,
+          "definicion": "CHECK ((tipo = 'DESCARTE'::text) = (tipo_desperdicio_id IS NOT NULL))"
+        },
+        {
+          "tipo": "c",
+          "nombre": "movimiento_cantidad_check",
+          "comentario": null,
+          "definicion": "CHECK (cantidad > 0::numeric)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "movimiento_despensa_item_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (despensa_item_id) REFERENCES despensa_item(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "p",
+          "nombre": "movimiento_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "movimiento_registrado_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (registrado_por) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "c",
+          "nombre": "movimiento_tipo_check",
+          "comentario": null,
+          "definicion": "CHECK (tipo = ANY (ARRAY['INGRESO'::text, 'CONSUMO'::text, 'DESCARTE'::text, 'AJUSTE'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "movimiento_tipo_desperdicio_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (tipo_desperdicio_id) REFERENCES tipo_desperdicio(id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "notificacion",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "notificacion_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX notificacion_pkey ON public.notificacion USING btree (id)"
+        },
+        {
+          "nombre": "notificacion_clave_dedup_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX notificacion_clave_dedup_key ON public.notificacion USING btree (clave_dedup)"
+        },
+        {
+          "nombre": "ix_notif_programada",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_notif_programada ON public.notificacion USING btree (estado, programada_para)"
+        },
+        {
+          "nombre": "ix_notif_perfil",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_notif_perfil ON public.notificacion USING btree (perfil_id)"
+        },
+        {
+          "nombre": "ix_notif_plantilla",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_notif_plantilla ON public.notificacion USING btree (plantilla_id)"
+        },
+        {
+          "nombre": "ix_notif_item",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_notif_item ON public.notificacion USING btree (despensa_item_id)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "perfil_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "plantilla_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "despensa_item_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "jsonb",
+          "nombre": "datos",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "estado",
+          "default": "'PENDIENTE'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "programada_para",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "timestamp with time zone",
+          "nombre": "leida_en",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "clave_dedup",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": "Ej: venc:<despensa_item_id>:<fecha>. Evita avisos duplicados."
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "created_at",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "u",
+          "nombre": "notificacion_clave_dedup_key",
+          "comentario": null,
+          "definicion": "UNIQUE (clave_dedup)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "notificacion_despensa_item_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (despensa_item_id) REFERENCES despensa_item(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "c",
+          "nombre": "notificacion_estado_check",
+          "comentario": null,
+          "definicion": "CHECK (estado = ANY (ARRAY['PENDIENTE'::text, 'ENVIADA'::text, 'LEIDA'::text, 'CANCELADA'::text, 'FALLIDA'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "notificacion_perfil_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (perfil_id) REFERENCES perfil(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "p",
+          "nombre": "notificacion_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "notificacion_plantilla_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (plantilla_id) REFERENCES plantilla_notificacion(id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "parametro",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "parametro_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX parametro_pkey ON public.parametro USING btree (clave)"
+        },
+        {
+          "nombre": "ix_param_actualizado_por",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_param_actualizado_por ON public.parametro USING btree (actualizado_por)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "clave",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "valor",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "tipo_dato",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "descripcion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "actualizado_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "actualizado_en",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "admin_auditoria_parametro",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER admin_auditoria_parametro AFTER INSERT OR DELETE OR UPDATE ON parametro FOR EACH ROW EXECUTE FUNCTION admin_auditar('clave')",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "f",
+          "nombre": "parametro_actualizado_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (actualizado_por) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "p",
+          "nombre": "parametro_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (clave)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "parametro_tipo_dato_check",
+          "comentario": null,
+          "definicion": "CHECK (tipo_dato = ANY (ARRAY['TEXTO'::text, 'ENTERO'::text, 'DECIMAL'::text, 'BOOLEANO'::text, 'JSON'::text]))"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "perfil",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "perfil_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX perfil_pkey ON public.perfil USING btree (id)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "nombre",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "apellido",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "date",
+          "nombre": "fecha_nacimiento",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "sexo",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "zona_horaria",
+          "default": "'America/Santiago'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "avatar_url",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "created_at",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "updated_at",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "estado_cuenta",
+          "default": "'ACTIVA'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "admin_perfil_proteger_estado",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER admin_perfil_proteger_estado BEFORE UPDATE OF estado_cuenta ON perfil FOR EACH ROW EXECUTE FUNCTION admin_perfil_proteger_estado()",
+          "habilitado": "O"
+        },
+        {
+          "nombre": "trg_perfil_updated_at",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER trg_perfil_updated_at BEFORE UPDATE ON perfil FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": "Extiende auth.users con datos de negocio y analitica. PK = id de auth.users.",
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "perfil_estado_cuenta_check",
+          "comentario": null,
+          "definicion": "CHECK (estado_cuenta = ANY (ARRAY['ACTIVA'::text, 'DESACTIVADA'::text, 'SUSPENDIDA'::text, 'BANEADA'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "perfil_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (id) REFERENCES auth.users(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "p",
+          "nombre": "perfil_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "perfil_sexo_check",
+          "comentario": null,
+          "definicion": "CHECK (sexo = ANY (ARRAY['FEMENINO'::text, 'MASCULINO'::text, 'OTRO'::text, 'NO_INFORMA'::text]))"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "perfil_identificacion",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "perfil_identificacion_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX perfil_identificacion_pkey ON public.perfil_identificacion USING btree (usuario_id)"
+        },
+        {
+          "nombre": "perfil_identificacion_rut_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX perfil_identificacion_rut_key ON public.perfil_identificacion USING btree (rut)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "usuario_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "rut",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "character(1)",
+          "nombre": "dv",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "registrado_en",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "identificacion_rut_dv",
+          "comentario": null,
+          "definicion": "CHECK (dv = dv_rut(rut))"
+        },
+        {
+          "tipo": "c",
+          "nombre": "identificacion_rut_rango",
+          "comentario": null,
+          "definicion": "CHECK (rut >= 1000000 AND rut <= 99999999)"
+        },
+        {
+          "tipo": "p",
+          "nombre": "perfil_identificacion_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (usuario_id)"
+        },
+        {
+          "tipo": "u",
+          "nombre": "perfil_identificacion_rut_key",
+          "comentario": null,
+          "definicion": "UNIQUE (rut)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "perfil_identificacion_usuario_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (usuario_id) REFERENCES perfil(id) ON DELETE CASCADE"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "perfil_rol",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "perfil_rol_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX perfil_rol_pkey ON public.perfil_rol USING btree (perfil_id, rol_id)"
+        },
+        {
+          "nombre": "ix_pr_rol",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_pr_rol ON public.perfil_rol USING btree (rol_id)"
+        },
+        {
+          "nombre": "ix_pr_asignado_por",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_pr_asignado_por ON public.perfil_rol USING btree (asignado_por)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "perfil_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "rol_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "asignado_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "asignado_en",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "admin_auditoria_perfil_rol",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER admin_auditoria_perfil_rol AFTER INSERT OR DELETE OR UPDATE ON perfil_rol FOR EACH ROW EXECUTE FUNCTION admin_auditar('perfil_id', 'rol_id')",
+          "habilitado": "O"
+        },
+        {
+          "nombre": "admin_proteger_ultimo_admin",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER admin_proteger_ultimo_admin BEFORE DELETE ON perfil_rol FOR EACH ROW EXECUTE FUNCTION admin_proteger_ultimo_admin()",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "f",
+          "nombre": "perfil_rol_asignado_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (asignado_por) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "f",
+          "nombre": "perfil_rol_perfil_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (perfil_id) REFERENCES perfil(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "p",
+          "nombre": "perfil_rol_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (perfil_id, rol_id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "perfil_rol_rol_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (rol_id) REFERENCES rol(id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "permiso",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "permiso_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX permiso_pkey ON public.permiso USING btree (id)"
+        },
+        {
+          "nombre": "permiso_codigo_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX permiso_codigo_key ON public.permiso USING btree (codigo)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "id",
+          "default": null,
+          "identity": "d",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "codigo",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "descripcion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "modulo",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "u",
+          "nombre": "permiso_codigo_key",
+          "comentario": null,
+          "definicion": "UNIQUE (codigo)"
+        },
+        {
+          "tipo": "p",
+          "nombre": "permiso_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "plantilla_notificacion",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "plantilla_notificacion_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX plantilla_notificacion_pkey ON public.plantilla_notificacion USING btree (id)"
+        },
+        {
+          "nombre": "plantilla_notificacion_codigo_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX plantilla_notificacion_codigo_key ON public.plantilla_notificacion USING btree (codigo)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "id",
+          "default": null,
+          "identity": "d",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "codigo",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "categoria",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "titulo_tpl",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "cuerpo_tpl",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "es_silenciable",
+          "default": "true",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "plantilla_notificacion_categoria_check",
+          "comentario": null,
+          "definicion": "CHECK (categoria = ANY (ARRAY['VENCIMIENTO'::text, 'RESUMEN'::text, 'HOGAR'::text, 'SISTEMA'::text, 'MODERACION'::text]))"
+        },
+        {
+          "tipo": "u",
+          "nombre": "plantilla_notificacion_codigo_key",
+          "comentario": null,
+          "definicion": "UNIQUE (codigo)"
+        },
+        {
+          "tipo": "p",
+          "nombre": "plantilla_notificacion_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "preferencia_notificacion",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "preferencia_notificacion_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX preferencia_notificacion_pkey ON public.preferencia_notificacion USING btree (id)"
+        },
+        {
+          "nombre": "preferencia_notificacion_perfil_id_plantilla_id_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX preferencia_notificacion_perfil_id_plantilla_id_key ON public.preferencia_notificacion USING btree (perfil_id, plantilla_id)"
+        },
+        {
+          "nombre": "ix_pref_plantilla",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_pref_plantilla ON public.preferencia_notificacion USING btree (plantilla_id)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "perfil_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "plantilla_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "habilitada",
+          "default": "true",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "smallint",
+          "nombre": "dias_anticipacion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "time without time zone",
+          "nombre": "hora_envio",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "preferencia_notificacion_dias_anticipacion_check",
+          "comentario": null,
+          "definicion": "CHECK (dias_anticipacion >= 0)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "preferencia_notificacion_perfil_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (perfil_id) REFERENCES perfil(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "u",
+          "nombre": "preferencia_notificacion_perfil_id_plantilla_id_key",
+          "comentario": null,
+          "definicion": "UNIQUE (perfil_id, plantilla_id)"
+        },
+        {
+          "tipo": "p",
+          "nombre": "preferencia_notificacion_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "preferencia_notificacion_plantilla_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (plantilla_id) REFERENCES plantilla_notificacion(id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "region",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "region_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX region_pkey ON public.region USING btree (id)"
+        },
+        {
+          "nombre": "region_nombre_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX region_nombre_key ON public.region USING btree (nombre)"
+        },
+        {
+          "nombre": "region_orden_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX region_orden_key ON public.region USING btree (orden)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "smallint",
+          "nombre": "id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "nombre",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "smallint",
+          "nombre": "orden",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "u",
+          "nombre": "region_nombre_key",
+          "comentario": null,
+          "definicion": "UNIQUE (nombre)"
+        },
+        {
+          "tipo": "u",
+          "nombre": "region_orden_key",
+          "comentario": null,
+          "definicion": "UNIQUE (orden)"
+        },
+        {
+          "tipo": "p",
+          "nombre": "region_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "rol",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "rol_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX rol_pkey ON public.rol USING btree (id)"
+        },
+        {
+          "nombre": "rol_codigo_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX rol_codigo_key ON public.rol USING btree (codigo)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "id",
+          "default": null,
+          "identity": "d",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "codigo",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "nombre",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "descripcion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "es_sistema",
+          "default": "false",
+          "identity": "",
+          "generated": "",
+          "comentario": "Roles que la app necesita para operar; no deben borrarse desde el panel."
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "admin_auditoria_rol",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER admin_auditoria_rol AFTER INSERT OR DELETE OR UPDATE ON rol FOR EACH ROW EXECUTE FUNCTION admin_auditar('id')",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "u",
+          "nombre": "rol_codigo_key",
+          "comentario": null,
+          "definicion": "UNIQUE (codigo)"
+        },
+        {
+          "tipo": "p",
+          "nombre": "rol_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "rol_permiso",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "rol_permiso_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX rol_permiso_pkey ON public.rol_permiso USING btree (rol_id, permiso_id)"
+        },
+        {
+          "nombre": "ix_rp_permiso",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_rp_permiso ON public.rol_permiso USING btree (permiso_id)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "rol_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "permiso_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": [
+        {
+          "nombre": "admin_auditoria_rol_permiso",
+          "comentario": null,
+          "definicion": "CREATE TRIGGER admin_auditoria_rol_permiso AFTER INSERT OR DELETE OR UPDATE ON rol_permiso FOR EACH ROW EXECUTE FUNCTION admin_auditar('rol_id', 'permiso_id')",
+          "habilitado": "O"
+        }
+      ],
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "f",
+          "nombre": "rol_permiso_permiso_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (permiso_id) REFERENCES permiso(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "p",
+          "nombre": "rol_permiso_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (rol_id, permiso_id)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "rol_permiso_rol_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (rol_id) REFERENCES rol(id) ON DELETE CASCADE"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "solicitud_soporte",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "solicitud_soporte_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX solicitud_soporte_pkey ON public.solicitud_soporte USING btree (id)"
+        },
+        {
+          "nombre": "ix_soporte_estado",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_soporte_estado ON public.solicitud_soporte USING btree (estado, prioridad)"
+        },
+        {
+          "nombre": "ix_soporte_asignado",
+          "comentario": null,
+          "constraint": false,
+          "definicion": "CREATE INDEX ix_soporte_asignado ON public.solicitud_soporte USING btree (asignado_a) WHERE (asignado_a IS NOT NULL)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "id",
+          "default": "gen_random_uuid()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "tipo",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "asunto",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "mensaje",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "estado",
+          "default": "'PENDIENTE'::text",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "smallint",
+          "nombre": "prioridad",
+          "default": "3",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "uuid",
+          "nombre": "solicitado_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "hogar_id",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "timestamp with time zone",
+          "nombre": "solicitado_en",
+          "default": "now()",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "asignado_a",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "respuesta",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "uuid",
+          "nombre": "respondido_por",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "timestamp with time zone",
+          "nombre": "respondido_en",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "timestamp with time zone",
+          "nombre": "cerrado_en",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "c",
+          "nombre": "ck_soporte_asignacion",
+          "comentario": null,
+          "definicion": "CHECK (estado = 'PENDIENTE'::text OR asignado_a IS NOT NULL)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "ck_soporte_cierre",
+          "comentario": null,
+          "definicion": "CHECK ((estado = 'CERRADA'::text) = (cerrado_en IS NOT NULL))"
+        },
+        {
+          "tipo": "c",
+          "nombre": "ck_soporte_respuesta",
+          "comentario": null,
+          "definicion": "CHECK ((respuesta IS NOT NULL) = (respondido_por IS NOT NULL AND respondido_en IS NOT NULL))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "solicitud_soporte_asignado_a_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (asignado_a) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "c",
+          "nombre": "solicitud_soporte_estado_check",
+          "comentario": null,
+          "definicion": "CHECK (estado = ANY (ARRAY['PENDIENTE'::text, 'ASIGNADA'::text, 'RESPONDIDA'::text, 'CERRADA'::text]))"
+        },
+        {
+          "tipo": "f",
+          "nombre": "solicitud_soporte_hogar_id_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (hogar_id) REFERENCES hogar(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "p",
+          "nombre": "solicitud_soporte_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        },
+        {
+          "tipo": "c",
+          "nombre": "solicitud_soporte_prioridad_check",
+          "comentario": null,
+          "definicion": "CHECK (prioridad >= 1 AND prioridad <= 5)"
+        },
+        {
+          "tipo": "f",
+          "nombre": "solicitud_soporte_respondido_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (respondido_por) REFERENCES perfil(id) ON DELETE SET NULL"
+        },
+        {
+          "tipo": "f",
+          "nombre": "solicitud_soporte_solicitado_por_fkey",
+          "comentario": null,
+          "definicion": "FOREIGN KEY (solicitado_por) REFERENCES perfil(id) ON DELETE CASCADE"
+        },
+        {
+          "tipo": "c",
+          "nombre": "solicitud_soporte_tipo_check",
+          "comentario": null,
+          "definicion": "CHECK (tipo = ANY (ARRAY['CONSULTA'::text, 'ERROR'::text, 'SUGERENCIA'::text]))"
+        }
+      ]
+    },
+    {
+      "rls": true,
+      "nombre": "tipo_desperdicio",
+      "esquema": "public",
+      "indices": [
+        {
+          "nombre": "tipo_desperdicio_pkey",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX tipo_desperdicio_pkey ON public.tipo_desperdicio USING btree (id)"
+        },
+        {
+          "nombre": "tipo_desperdicio_codigo_key",
+          "comentario": null,
+          "constraint": true,
+          "definicion": "CREATE UNIQUE INDEX tipo_desperdicio_codigo_key ON public.tipo_desperdicio USING btree (codigo)"
+        }
+      ],
+      "columnas": [
+        {
+          "nulo": false,
+          "tipo": "bigint",
+          "nombre": "id",
+          "default": null,
+          "identity": "d",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "codigo",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "text",
+          "nombre": "nombre",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": true,
+          "tipo": "text",
+          "nombre": "descripcion",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "es_evitable",
+          "default": null,
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "cuenta_para_vida_util",
+          "default": "false",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        },
+        {
+          "nulo": false,
+          "tipo": "boolean",
+          "nombre": "activo",
+          "default": "true",
+          "identity": "",
+          "generated": "",
+          "comentario": null
+        }
+      ],
+      "triggers": null,
+      "force_rls": false,
+      "comentario": null,
+      "constraints": [
+        {
+          "tipo": "u",
+          "nombre": "tipo_desperdicio_codigo_key",
+          "comentario": null,
+          "definicion": "UNIQUE (codigo)"
+        },
+        {
+          "tipo": "p",
+          "nombre": "tipo_desperdicio_pkey",
+          "comentario": null,
+          "definicion": "PRIMARY KEY (id)"
+        }
+      ]
+    }
+  ]
+}

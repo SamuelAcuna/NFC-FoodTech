@@ -1,0 +1,423 @@
+Resolving dependencies...
+Downloading packages...
+  app_links 7.2.1 (7.2.2 available)
+  app_links_linux 1.0.3 (1.0.5 available)
+  app_links_web 1.0.4 (1.0.5 available)
+  code_assets 2.1.0 (2.2.0 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+  crypto 3.0.7 (3.0.8 available)
+  flutter_local_notifications 22.0.0 (23.0.1 available)
+  flutter_local_notifications_linux 8.0.2 (9.0.0 available)
+  flutter_local_notifications_platform_interface 12.2.0 (13.0.0 available)
+  flutter_local_notifications_web 1.0.0 (2.0.0 available)
+  flutter_local_notifications_windows 3.1.1 (4.0.1 available)
+  gotrue 2.27.2 (2.27.3 available)
+  image_picker_ios 0.8.13+13 (0.8.13+15 available)
+  jni 1.1.1 (1.1.2 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  mobile_scanner 7.4.2 (7.5.0 available)
+  objective_c 9.6.2 (9.6.4 available)
+  passkeys_platform_interface 2.10.0 (2.11.0 available)
+  realtime_client 2.13.0 (2.13.2 available)
+  shared_preferences_android 2.4.28 (2.5.5 available)
+  shared_preferences_foundation 2.5.7 (2.6.2 available)
+  supabase 2.16.2 (2.16.5 available)
+  supabase_flutter 2.18.0 (2.18.3 available)
+  test_api 0.7.12 (0.7.15 available)
+  url_launcher 6.3.2 (6.3.3 available)
+  vector_math 2.4.3 (2.4.4 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+28 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart
+00:00 +0: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +2: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +3: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +4: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +5: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +6: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +7: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +8: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +9: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +10: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +11: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +12: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +13: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +14: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +15: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +16: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +17: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +18: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +19: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +20: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +21: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +22: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +23: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +24: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +25: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +26: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +27: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +28: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +29: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 g a g
+00:00 +30: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 0.5 kg a g
+00:00 +31: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 500 ml a ml
+00:00 +32: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 0.5 L a ml
+00:00 +33: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 2 l a ml
+00:00 +34: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: convierte 0.5 un a un
+00:00 +35: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: no compara dimensiones incompatibles o unidades desconocidas
+00:00 +36: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: rechaza cantidades inválidas, no finitas y desbordamientos
+00:00 +37: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: evalúa 1500 g frente a 1 kg
+00:00 +38: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: evalúa 1000 g frente a 1 kg
+00:00 +39: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: evalúa 999 g frente a 1 kg
+00:00 +40: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: evalúa 0 g frente a 1 kg
+00:00 +41: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: suma ingresos y excluye otros hogares, alimentos y estados
+00:00 +42: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: consulta todas las páginas de existencias
+00:00 +43: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: utiliza la unidad real y no permite alimentos de otro hogar
+00:00 +44: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: stock inválido no equivale a stock cero
+00:00 +45: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +46: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +47: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +48: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +49: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +50: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +51: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +52: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +53: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +54: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +55: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +56: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +57: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +58: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +59: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +60: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +61: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +62: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +63: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +64: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +65: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +66: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +67: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +68: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +69: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +70: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:00 +71: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:01 +72: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:01 +73: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:01 +74: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:01 +75: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:01 +76: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +77: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +78: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +79: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +80: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +81: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +82: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +83: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +84: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +85: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +86: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +87: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +88: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +89: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +90: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +90: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/estimacion_compra_test.dart: fallo del historial permite seguir abriendo la confirmación
+No se pudo estimar el gasto de la lista: PostgrestException(message: Historial no disponible, code: 400, details: null, hint: null)
+00:02 +91: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +92: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +93: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +94: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:02 +95: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +96: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +97: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +98: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +99: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +100: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +101: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +102: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +103: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +104: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +105: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +106: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +107: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +108: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +109: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +110: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +111: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +112: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +113: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:03 +114: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:04 +115: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:04 +116: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:04 +117: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:04 +118: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:04 +119: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:04 +120: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:04 +121: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:04 +122: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:05 +123: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:05 +124: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:05 +125: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +126: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +127: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +128: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +129: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +130: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +131: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +132: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +133: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +134: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +135: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +136: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +137: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +138: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +139: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +140: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +141: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +142: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +143: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +144: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +145: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +146: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +147: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +148: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +149: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +150: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +151: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +152: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +153: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +154: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +155: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +156: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +157: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +158: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +159: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +160: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +161: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +162: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +163: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +164: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +165: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +166: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +167: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +168: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +169: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:06 +170: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:07 +171: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:07 +172: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:07 +173: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:07 +174: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:07 +175: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:07 +176: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: propaga el fallo de consulta para tratarlo como no verificado
+00:07 +177: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +178: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +179: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +180: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +181: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +182: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +183: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +184: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +185: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +186: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +187: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +188: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +188: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: fallo de red informa sin fingir stock cero
+No se pudo comprobar el stock de compra: ClientException: Sin conexión
+00:08 +189: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +190: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +191: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +192: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +193: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +194: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:08 +195: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:09 +196: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:09 +197: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (false)
+00:09 +198: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:09 +199: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:09 +200: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:09 +201: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +202: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +203: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +204: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +205: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +206: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +207: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +208: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +209: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +210: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +211: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +212: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +213: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +214: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +215: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +216: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +217: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +218: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +219: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +220: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +221: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +222: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +223: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +224: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +225: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +226: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +227: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble pulsación confirma e incorpora una sola vez y vuelve una pantalla
+00:10 +228: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +229: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +230: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +231: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +232: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +233: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +234: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +235: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +236: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +237: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:10 +238: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:11 +239: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:11 +240: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (false)
+00:11 +241: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: varias listas muestran selector y cancelar conserva consumo
+00:11 +242: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: varias listas muestran selector y cancelar conserva consumo
+00:11 +243: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: varias listas muestran selector y cancelar conserva consumo
+00:11 +244: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: varias listas muestran selector y cancelar conserva consumo
+00:11 +245: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con flecha
+00:12 +246: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: compra actualiza inventario una vez al volver con flecha
+00:12 +247: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:12 +248: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:12 +249: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:13 +250: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:13 +251: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:13 +252: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:13 +253: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:13 +254: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cinco pestanas conservan hogar, barra y flecha Atras (true)
+00:13 +255: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/advertencia_stock_test.dart: agregado manual con stock suficiente: continuar
+00:13 +256: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/perdida_economica_test.dart: pantalla y archivo CSV: precio cero conocido, oscuro: true
+00:13 +257: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/sugerencias_compra_test.dart: Consultas y aceptación R69 doble pulsación abre un diálogo y envía una sola vez
+00:13 +258: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/sugerencias_compra_test.dart: Consultas y aceptación R69 doble pulsación abre un diálogo y envía una sola vez
+00:14 +259: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: timeout de consumo no se reenvía aunque el servidor termine después
+00:14 +260: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: timeout de consumo no se reenvía aunque el servidor termine después
+00:14 +261: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: timeout de consumo no se reenvía aunque el servidor termine después
+00:14 +262: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:14 +263: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:14 +264: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:15 +265: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:15 +266: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: varias compras se agrupan en una recarga y otra visita sin compras no recarga
+00:15 +267: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: perfil y configuracion conservan seguridad sin eliminacion (true)
+00:15 +268: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: timeout de inserción conserva consumo y no vuelve a enviar
+00:15 +269: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: timeout de inserción conserva consumo y no vuelve a enviar
+00:15 +270: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: timeout de inserción conserva consumo y no vuelve a enviar
+00:15 +271: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: timeout de inserción conserva consumo y no vuelve a enviar
+00:15 +272: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: timeout de inserción conserva consumo y no vuelve a enviar
+00:16 +273: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: visita sin compras y confirmación cancelada no recargan inventario
+00:16 +274: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: visita sin compras y confirmación cancelada no recargan inventario
+00:16 +275: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (true)
+00:17 +276: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Home compacto sin desbordes en pantalla estrecha (true)
+00:17 +277: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/reposicion_automatica_test.dart: doble selección de lista incorpora una vez en el destino elegido
+00:17 +278: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: compra rechazada no notifica cambios al inventario
+00:17 +279: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/sugerencias_compra_test.dart: Consultas y aceptación R69 cantidad inválida conserva el diálogo sin enviar
+00:17 +280: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: resumen usa datos reales, filtros temporales y cache entre pestañas
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: 'in.("DESCARTE")'
+  Actual: 'in.("CONSUMO","DESCARTE")'
+   Which: is different.
+          Expected: in.("DESCARTE") ...
+            Actual: in.("CONSUMO"," ...
+                         ^
+           Differ at offset 5
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart:525:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart line 525
+The test description was:
+  resumen usa datos reales, filtros temporales y cache entre pestañas
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:18 +280 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: la recarga conserva búsqueda y filtros seleccionados
+00:18 +280 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: resumen usa datos reales, filtros temporales y cache entre pestañas [E]
+  Test failed. See exception logs above.
+  The test description was: resumen usa datos reales, filtros temporales y cache entre pestañas
+  
+00:18 +281 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: la recarga conserva búsqueda y filtros seleccionados
+00:18 +282 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: la recarga conserva búsqueda y filtros seleccionados
+00:18 +283 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: respuesta económica pendiente no restaura datos de otra cuenta
+00:18 +284 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/sugerencias_compra_test.dart: Consultas y aceptación R69 revisa pendientes otra vez tras continuar en R70
+00:19 +285 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/sugerencias_compra_test.dart: Consultas y aceptación R69 revisa pendientes otra vez tras continuar en R70
+00:19 +286 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: compras funciona desde otra pantalla sin callback de inventario
+00:19 +287 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: compras funciona desde otra pantalla sin callback de inventario
+00:19 +287 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: notificaciones recientes reales limitadas y filtradas por usuario
+M28: resultado de sincronización: {}
+00:19 +288 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: notificaciones recientes reales limitadas y filtradas por usuario
+00:19 +289 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/sugerencias_compra_test.dart: Consultas y aceptación R69 rechazo explícito del servidor muestra el error
+00:19 +290 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: la recarga conserva la expansión de un alimento existente
+00:20 +291 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: la recarga conserva la expansión de un alimento existente
+00:20 +292 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: la recarga conserva la expansión de un alimento existente
+00:20 +293 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/flujos_compras_test.dart: la recarga conserva la expansión de un alimento existente
+00:20 +294 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: pestanas conservan filtros y Atras Android distingue subruta y raiz
+00:21 +295 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: pestanas conservan filtros y Atras Android distingue subruta y raiz
+00:21 +296 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: registro rapido reutiliza seleccion manual y actualiza contador
+M19: alimentos registrados: 1
+00:22 +297 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: seleccionar pestaña mientras carga el hogar no deja una pantalla vacía
+00:23 +298 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: toque de aviso abre alertas solo con sesión y hogar vigentes
+00:23 +299 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: toque de aviso no abre contexto antiguo: otra cuenta
+00:24 +300 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: toque de aviso no abre contexto antiguo: expulsado
+00:24 +301 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: toque de aviso no abre contexto antiguo: otro hogar
+00:24 +302 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: toque de aviso no abre contexto antiguo: sin conexión
+00:25 +303 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: accesos reales del Home conservan hogar y Atrás (false)
+00:26 +304 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: accesos reales del Home conservan hogar y Atrás (true)
+00:26 +305 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: indicadores abiertos desde Inventario vuelven a Inventario con su flecha
+00:27 +306 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Análisis respeta expulsión y cierre de rutas protegidas
+00:28 +307 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: sin hogar mantiene cinco pestanas y bloquea registro
+00:28 +308 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: resumen distingue cero real y alimentos distintos disponibles
+00:28 +309 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: resumen pagina y no informa totales truncados
+00:29 +310 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: error del resumen permite reintento sin confundirse con cero o sin hogar
+00:29 +311 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: resumen descarta datos pendientes tras cambio de cuenta
+00:29 +312 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: resumen se actualiza al volver de Inventario sin consulta extra al entrar
+00:30 +313 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: ayuda describe consumo implementado y acceso desde Inventario
+00:30 +314 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: sin hogar ofrece gestion desde Inicio y bloquea registro (claro)
+00:30 +315 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: un hogar se carga sin selección y conserva mapa de inventario (claro)
+00:30 +316 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: error de consulta no se interpreta como ausencia y permite reintento (claro)
+00:31 +317 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Mi hogar conserva gestión y oculta creación y selección (claro)
+00:31 +318 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: sin hogar ofrece gestion desde Inicio y bloquea registro (oscuro)
+00:31 +319 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: un hogar se carga sin selección y conserva mapa de inventario (oscuro)
+00:32 +320 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: error de consulta no se interpreta como ausencia y permite reintento (oscuro)
+00:32 +321 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Mi hogar conserva gestión y oculta creación y selección (oscuro)
+00:32 +322 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: catálogo recibe el mapa completo del único hogar
+00:32 +323 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Recarga tras crear (gestión: false)
+00:33 +324 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Recarga tras unirse (gestión: false)
+M17: incorporación al hogar completada.
+00:33 +325 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Recarga tras crear (gestión: true)
+00:34 +326 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: Recarga tras unirse (gestión: true)
+M17: incorporación al hogar completada.
+00:34 +327 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: abandono actualiza Mi hogar y limpia el hogar del Home al volver
+00:35 +328 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: transferencia refresca los permisos visibles de Mi hogar
+00:36 +329 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: verifica nuevamente antes de abrir un hogar que dejó de pertenecer
+00:37 +330 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: error de red al entrar a pestana bloquea y permite reintentar
+00:37 +331 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: rechaza hogares múltiples sin elegir el primero (gestión: false)
+00:37 +332 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: respuesta anterior no restaura un hogar tras recarga (gestión: false)
+00:38 +333 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: rechaza hogares múltiples sin elegir el primero (gestión: true)
+00:38 +334 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: respuesta anterior no restaura un hogar tras recarga (gestión: true)
+00:38 +335 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cambio de cuenta invalida una consulta pendiente
+00:39 +336 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: sesión activa mantiene Inventario y navegación secundaria (false)
+00:40 +337 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: expulsión con Inventario abierto regresa al Home al reanudar (false)
+00:40 +338 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: sesión activa mantiene Inventario y navegación secundaria (true)
+00:41 +339 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: expulsión con Inventario abierto regresa al Home al reanudar (true)
+00:42 +340 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: expulsión en primer plano se detecta al abrir una subpantalla
+00:42 +341 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: expulsión cierra subpantalla y diálogo sin enviar escrituras
+00:43 +342 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: red caída bloquea el flujo sin expulsar y reintento recupera acceso
+00:44 +343 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: confirmar tras expulsión comprueba membresía y no crea la lista
+00:45 +344 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: cambio de cuenta durante validación no restaura el flujo anterior
+00:45 +345 -1: E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: reanudar y navegar comparten la misma consulta de acceso
+00:46 +346 -1: Some tests failed.
+
+Failing tests:
+  E:/NFC-FoodTech/.tmp-pruebas/app_sync/test/hogar_unico_test.dart: resumen usa datos reales, filtros temporales y cache entre pestañas
