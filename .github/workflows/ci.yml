@@ -1,0 +1,67 @@
+name: CI - NFC-FoodTech
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  aplicacion:
+    name: App móvil · analyze + test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Fase 2/Evidencias Proyecto/Evidencias de sistema/Aplicacion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          cache: true
+      - run: flutter --version
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test --reporter expanded
+
+  panel:
+    name: Panel administrativo · analyze + test + build web
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Fase 2/Evidencias Proyecto/Evidencias de sistema/PanelAdministracion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          cache: true
+      - run: flutter --version
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test --reporter expanded
+      - run: flutter build web --release
+
+  evidencias:
+    name: Evidencias de datos · catálogos y DDL
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar JSON del catálogo
+        run: |
+          python -m json.tool "Fase 2/Evidencias Proyecto/Evidencias de sistema/Evidencias de base de datos/catalogo_tablas.json" > /dev/null
+          python -m json.tool "Fase 2/Evidencias Proyecto/Evidencias de sistema/Evidencias de base de datos/catalogo_extras.json" > /dev/null
+      - name: Comprobar que el DDL y el diccionario estén presentes
+        run: |
+          test -s "Fase 2/Evidencias Proyecto/Evidencias de sistema/Evidencias de base de datos/NFC-FoodTech_DDL_esquema_public.sql"
+          test -s "Fase 2/Evidencias Proyecto/Evidencias de documentacion/Diccionario de datos NFC-FoodTech.docx"

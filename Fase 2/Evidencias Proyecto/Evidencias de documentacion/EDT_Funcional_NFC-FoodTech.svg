@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/></marker></defs>
+<rect x="50" y="40" width="1300" height="70" rx="14" fill="#1F3A5F"/>
+<text x="700" y="76" font-size="24" fill="#FFFFFF" font-weight="600" text-anchor="middle">SISTEMA NFC-FOODTECH</text>
+<text x="700" y="97" font-size="13" fill="#BFD7EA" font-weight="400" text-anchor="middle">Estructura de desglose funcional · 5 subsistemas · 15 funciones</text>
+<path d="M700,110 L700,126 M172,126 L1228,126" stroke="#94A3B8" stroke-width="1.6" fill="none"/>
+<path d="M172.0,126 L172.0,148" stroke="#94A3B8" stroke-width="1.6" fill="none"/>
+<path d="M436.0,126 L436.0,148" stroke="#94A3B8" stroke-width="1.6" fill="none"/>
+<path d="M700.0,126 L700.0,148" stroke="#94A3B8" stroke-width="1.6" fill="none"/>
+<path d="M964.0,126 L964.0,148" stroke="#94A3B8" stroke-width="1.6" fill="none"/>
+<path d="M1228.0,126 L1228.0,148" stroke="#94A3B8" stroke-width="1.6" fill="none"/>
+<rect x="50" y="148" width="244" height="58" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+<circle cx="76" cy="177" r="14" fill="#1D4ED8"/>
+<text x="76" y="181" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="98" y="182" font-size="14" fill="#1D4ED8" font-weight="600" text-anchor="start">Acceso y seguridad</text>
+<rect x="50" y="230" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="50" y="230" width="4" height="100" rx="2" fill="#1D4ED8"/>
+<text x="66" y="258" font-size="12" fill="#1D4ED8" font-weight="700" text-anchor="start">1.1</text>
+<text x="66" y="282" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Registro e inicio de sesión</text>
+<text x="66" y="304" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Correo y Google</text>
+<rect x="50" y="350" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="50" y="350" width="4" height="100" rx="2" fill="#1D4ED8"/>
+<text x="66" y="378" font-size="12" fill="#1D4ED8" font-weight="700" text-anchor="start">1.2</text>
+<text x="66" y="402" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Doble factor (MFA)</text>
+<text x="66" y="424" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Recuperación de contraseña</text>
+<rect x="50" y="470" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="50" y="470" width="4" height="100" rx="2" fill="#1D4ED8"/>
+<text x="66" y="498" font-size="12" fill="#1D4ED8" font-weight="700" text-anchor="start">1.3</text>
+<text x="66" y="522" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Perfil, RUT y documentos</text>
+<text x="66" y="544" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Aceptación y roles</text>
+<rect x="314" y="148" width="244" height="58" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+<circle cx="340" cy="177" r="14" fill="#0F766E"/>
+<text x="340" y="181" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="362" y="182" font-size="14" fill="#0F766E" font-weight="600" text-anchor="start">Hogar</text>
+<rect x="314" y="230" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="314" y="230" width="4" height="100" rx="2" fill="#0F766E"/>
+<text x="330" y="258" font-size="12" fill="#0F766E" font-weight="700" text-anchor="start">2.1</text>
+<text x="330" y="282" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Crear y seleccionar hogar</text>
+<text x="330" y="304" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Comuna y sector</text>
+<rect x="314" y="350" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="314" y="350" width="4" height="100" rx="2" fill="#0F766E"/>
+<text x="330" y="378" font-size="12" fill="#0F766E" font-weight="700" text-anchor="start">2.2</text>
+<text x="330" y="402" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Invitaciones y miembros</text>
+<text x="330" y="424" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Roles: ADMIN / MIEMBRO</text>
+<rect x="314" y="470" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="314" y="470" width="4" height="100" rx="2" fill="#0F766E"/>
+<text x="330" y="498" font-size="12" fill="#0F766E" font-weight="700" text-anchor="start">2.3</text>
+<text x="330" y="522" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Datos del hogar</text>
+<text x="330" y="544" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Adultos, menores, ubicación</text>
+<rect x="578" y="148" width="244" height="58" rx="10" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+<circle cx="604" cy="177" r="14" fill="#B45309"/>
+<text x="604" y="181" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">3</text>
+<text x="626" y="182" font-size="14" fill="#B45309" font-weight="600" text-anchor="start">Inventario</text>
+<rect x="578" y="230" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="578" y="230" width="4" height="100" rx="2" fill="#B45309"/>
+<text x="594" y="258" font-size="12" fill="#B45309" font-weight="700" text-anchor="start">3.1</text>
+<text x="594" y="282" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Registro de alimentos</text>
+<text x="594" y="304" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Catálogo y personalizados</text>
+<rect x="578" y="350" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="578" y="350" width="4" height="100" rx="2" fill="#B45309"/>
+<text x="594" y="378" font-size="12" fill="#B45309" font-weight="700" text-anchor="start">3.2</text>
+<text x="594" y="402" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Stock por ubicación</text>
+<text x="594" y="424" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Despensa, refri, congelador</text>
+<rect x="578" y="470" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="578" y="470" width="4" height="100" rx="2" fill="#B45309"/>
+<text x="594" y="498" font-size="12" fill="#B45309" font-weight="700" text-anchor="start">3.3</text>
+<text x="594" y="522" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Movimientos e historial</text>
+<text x="594" y="544" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Ingreso, consumo, descarte, ajuste</text>
+<rect x="842" y="148" width="244" height="58" rx="10" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1.5"/>
+<circle cx="868" cy="177" r="14" fill="#7C3AED"/>
+<text x="868" y="181" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">4</text>
+<text x="890" y="182" font-size="14" fill="#7C3AED" font-weight="600" text-anchor="start">Alertas y compras</text>
+<rect x="842" y="230" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="842" y="230" width="4" height="100" rx="2" fill="#7C3AED"/>
+<text x="858" y="258" font-size="12" fill="#7C3AED" font-weight="700" text-anchor="start">4.1</text>
+<text x="858" y="282" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Avisos de vencimiento</text>
+<text x="858" y="304" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Preferencias de notificación</text>
+<rect x="842" y="350" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="842" y="350" width="4" height="100" rx="2" fill="#7C3AED"/>
+<text x="858" y="378" font-size="12" fill="#7C3AED" font-weight="700" text-anchor="start">4.2</text>
+<text x="858" y="402" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Motor de sugerencias</text>
+<text x="858" y="424" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Historial 30 días / cobertura 7</text>
+<rect x="842" y="470" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="842" y="470" width="4" height="100" rx="2" fill="#7C3AED"/>
+<text x="858" y="498" font-size="12" fill="#7C3AED" font-weight="700" text-anchor="start">4.3</text>
+<text x="858" y="522" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Lista de compra</text>
+<text x="858" y="544" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Sugerencias, compra e historial</text>
+<rect x="1106" y="148" width="244" height="58" rx="10" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1.5"/>
+<circle cx="1132" cy="177" r="14" fill="#BE123C"/>
+<text x="1132" y="181" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">5</text>
+<text x="1154" y="182" font-size="14" fill="#BE123C" font-weight="600" text-anchor="start">Indicadores y control</text>
+<rect x="1106" y="230" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="1106" y="230" width="4" height="100" rx="2" fill="#BE123C"/>
+<text x="1122" y="258" font-size="12" fill="#BE123C" font-weight="700" text-anchor="start">5.1</text>
+<text x="1122" y="282" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Indicadores del hogar</text>
+<text x="1122" y="304" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Consumo, descarte, CLP, rankings</text>
+<rect x="1106" y="350" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="1106" y="350" width="4" height="100" rx="2" fill="#BE123C"/>
+<text x="1122" y="378" font-size="12" fill="#BE123C" font-weight="700" text-anchor="start">5.2</text>
+<text x="1122" y="402" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Panel de administración</text>
+<text x="1122" y="424" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">Catálogo, usuarios, reportes CSV</text>
+<rect x="1106" y="470" width="244" height="100" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.3"/>
+<rect x="1106" y="470" width="4" height="100" rx="2" fill="#BE123C"/>
+<text x="1122" y="498" font-size="12" fill="#BE123C" font-weight="700" text-anchor="start">5.3</text>
+<text x="1122" y="522" font-size="13" fill="#1E293B" font-weight="600" text-anchor="start">Seguridad y auditoría</text>
+<text x="1122" y="544" font-size="11.5" fill="#64748B" font-weight="400" text-anchor="start">RLS, MFA, roles, soporte</text>
+<rect x="50" y="640" width="1300" height="80" rx="12" fill="#F1F5F9" stroke="#E2E8F0"/>
+<text x="700" y="674" font-size="16" fill="#1F3A5F" font-weight="600" text-anchor="middle">Flujo de uso:  Acceso  →  Hogar  →  Inventario  →  Alertas y compras  →  Indicadores y control</text>
+<text x="700" y="698" font-size="12.5" fill="#64748B" font-weight="400" text-anchor="middle">El panel de administración y la seguridad transversal acompañan todo el ciclo</text>
+</svg>

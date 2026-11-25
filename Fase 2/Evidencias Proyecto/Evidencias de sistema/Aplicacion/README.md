@@ -29,12 +29,12 @@ La aplicación permite registrar alimentos, administrar el inventario compartido
 
 ## Tecnologías utilizadas
 
-- **Flutter:** desarrollo de la aplicación.
+- **Flutter 3.47.7 / Dart 3.13.5:** desarrollo de la aplicación (versión verificada en `Evidencias de pruebas/app_version.txt`).
 - **Dart:** lenguaje de programación.
 - **Supabase Auth:** autenticación y gestión de sesiones.
 - **PostgreSQL:** base de datos.
 - **Visual Studio Code:** entorno de desarrollo.
-- **Git y GitHub:** control de versiones.
+- **Git y GitHub:** control de versiones e integración continua (`.github/workflows/ci.yml`).
 
 ## Requisitos
 
@@ -110,7 +110,7 @@ supabase/       Edge Functions de la aplicación
 
 ## Estado del proyecto
 
-Versión entregada al cierre de la Fase 2. Incluye autenticación (correo y Google), hogares con invitación por código, inventario por ubicación, consumo y descarte con motivo, lista de compras con sugerencias, alertas de vencimiento e indicadores de desperdicio. Cuenta con 347 pruebas automatizadas aprobadas.
+Versión entregada al cierre de la Fase 2. Incluye autenticación (correo y Google), hogares con invitación por código, inventario por ubicación, consumo y descarte con motivo, lista de compras con sugerencias, alertas de vencimiento e indicadores de desperdicio. Cuenta con 347 pruebas automatizadas aprobadas (13 de noviembre de 2026), autenticación con Google y MFA, hogares con invitación por código, inventario por ubicación, consumo y descarte con motivo, lista de compras con sugerencias, alertas de vencimiento e indicadores de desperdicio calculados desde `perfil.fecha_nacimiento` para la edad. El escaneo usa `mobile_scanner`; no se declara lectura por hardware NFC.
 
 ## Objetivo
 
